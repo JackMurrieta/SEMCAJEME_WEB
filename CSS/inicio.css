@@ -1,0 +1,12 @@
+.inicio {
+}
+.contenedor__video {
+  max-width: 100%; /* o 600px, 80%, etc. */
+  aspect-ratio: 16/9;
+  margin: auto;
+}
+
+.inicio__video {
+  width: 100%;
+}
+

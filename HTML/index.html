@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Favicon SEMCAJEME-->
-    <link rel="icon" href="../IMG/logoSemCajeme_default.png" type="image/x-icon" />
-    <link rel="stylesheet" href="..\CSS\index.css" />
+    <link
+      rel="icon"
+      href="../IMG/logoSemCajeme_default.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/seccionesInicio.css">
+    <link rel="stylesheet" href=../CSS/inicio.css>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +22,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar raleway-bold ">
+      <nav class="navbar raleway-bold">
         <ul class="navbar__list">
           <!-- Logo  SEMCAJEME-->
           <li>
@@ -47,9 +53,69 @@
       </nav>
     </header>
   </body>
-  <section class="contenido contenido--first">
-    <!--PONER UN DIV QUE TENDRA VIDEO Y DIFERENTES DETAILS SUMMARY O AHI MASOMENOS-->
+  <section>
+    <div class="inicio__contenedor">
+      <!--Contenedor video principal-->
+      <div class="contenedor__video">
+        <video
+          class="inicio__video"
+          src="../VIDEOS/VIDEOINICIO.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+      </div>
+      <!--Div que  details y summary de algunas opciones sobre sem -->
+      <div class="inicio__secciones">
+        <div class="seccion__contenedor">
+          <details class="seccion">
+            <summary class="seccion__titulo">
+              Historia
+              <span class="seccion__icono">⌄</span>
+            </summary>
+            <div class="seccion__contenido">
+              <p>Información sobre la historia de SEM</p>
+            </div>
+          </details>
+        </div>
 
+        <div class="seccion__contenedor">
+          <details class="seccion">
+            <summary class="seccion__titulo">
+              Congresos
+              <span class="seccion__icono">⌄</span>
+            </summary>
+            <div class="seccion__contenido">
+              <p>Información sobre la historia de SEM</p>
+            </div>
+          </details>
+        </div>
 
+        <div class="seccion__contenedor">
+          <details class="seccion">
+            <summary class="seccion__titulo">
+              Mesa directiva
+              <span class="seccion__icono">⌄</span>
+            </summary>
+            <div class="seccion__contenido">
+              <p>Información sobre la historia de SEM</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="seccion__contenedor">
+          <details class="seccion">
+            <summary class="seccion__titulo">
+              Contactos
+              <span class="seccion__icono">⌄</span>
+            </summary>
+            <div class="seccion__contenido">
+              <p>Información sobre la historia de SEM</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
   </section>
 </html>

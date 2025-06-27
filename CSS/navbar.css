@@ -1,0 +1,63 @@
+/*TIPOGRAFIAS*/
+.raleway-default {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+}
+
+.navbar {
+  margin:-10px;
+  padding: 0.5rem 1rem; /* un poco de espacio interno */
+  background: linear-gradient(
+    to bottom,
+    #1c1c1c93,
+    #2f2f2f60,
+    transparent
+  ); /* gradiente oscuro */
+  position: sticky; /* se queda fija arriba al hacer scroll */
+  top: 0;
+  z-index: 1000;
+}
+.navbar__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.nav__logo-link {
+    text-decoration: none;
+    margin: 50px
+
+}
+.nav__logo {
+  width: 15vh;
+}
+.list__item {
+  margin: 0 1rem;
+}
+.link__item {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.link__item:hover {
+  color: white;
+  background-color: #1971a3;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}

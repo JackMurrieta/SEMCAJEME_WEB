@@ -1,0 +1,33 @@
+.inicio__secciones {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-evenly;
+}
+.seccion__contenedor {
+    flex-grow: 1;
+    background-color:  #003d97;
+    max-width: 100%;
+    padding: 1em;
+    max-width: 100%;
+    
+}
+/*details*/
+.seccion {
+    color: #fff;
+
+}
+/*Summary*/
+.seccion__titulo {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+
+}
+
+.seccion__icono {
+    display: block;
+    text-align: center;
+    font-size: 2.3em;
+}
+.seccion__contenido {
+}
