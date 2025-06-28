@@ -10,7 +10,7 @@
 .contenedor__video {
   max-width: 100%; /* o 600px, 80%, etc. */
   aspect-ratio: 16/9;
-  height: 30em;
+  height: 35em;
   margin: auto;
 }
 

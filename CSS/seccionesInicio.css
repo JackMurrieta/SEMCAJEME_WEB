@@ -27,13 +27,13 @@
   position: absolute;
   inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
   z-index: 1;
-  background-image: url("../IMG/SECCIONES_PORTADAS/portadaHistoria.jpg"); /* cambia por la imagen correspondiente */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none; /* para que no bloquee clics en summary */
 
 }
+
 
 /* Capa azul con opacidad encima de la imagen */
 .contenedor__fondo::after {
@@ -86,22 +86,21 @@
   z-index: 3;
 }
 
-/* Imagen de fondo por sección: aplicada al summary 
-.seccion__contenedor--historia .seccion__titulo {
+/* Imagen de fondo por sección: aplicada al summary */
+.contenedor_fondo--historia {
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaHistoria.jpg");
 }
 
-.seccion__contenedor--congresos .seccion__titulo {
+.contenedor_fondo--congresos {
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaCongreso.jpg");
 }
 
-.seccion__contenedor--mesadirec .seccion__titulo {
+.contenedor_fondo--mesadirec {
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaMesaDirectiva.jpg");
 }
 
-.seccion__contenedor--contactos .seccion__titulo {
+.contenedor_fondo--contactos {
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
-  */
   
 
