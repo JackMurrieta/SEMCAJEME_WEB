@@ -1,33 +1,107 @@
+/* Contenedor general con flex-wrap */
 .inicio__secciones {
-    display: flex;
-    max-width: 100%;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
+
+/* Contenedor individual de cada sección */
 .seccion__contenedor {
-    flex-grow: 1;
-    background-color:  #003d97;
-    max-width: 100%;
-    padding: 1em;
-    max-width: 100%;
-    
+  box-sizing: border-box;
+  position: relative;
+  padding: 1.5rem;
+  overflow: hidden;
+  z-index: 0;
+  flex: 1 1 360px;
+  min-width: 360px;
+  min-height: 260px;
+  padding: 2rem;
 }
-/*details*/
+
+/* Eliminamos fondos anteriores */
+.seccion__contenedor::before,
+.seccion__contenedor::after {
+  display: none;
+}
+
+/* Contenedor details */
 .seccion {
-    color: #fff;
-
+  position: relative;
+  z-index: 2;
+  color: #fff;
 }
-/*Summary*/
+
+/* Título desplegable */
 .seccion__titulo {
-    text-align: center;
-    padding: 20px;
-    margin: auto;
-
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  margin: auto;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 61, 151, 0.65); /* capa azul */
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 2.5rem 1rem;
+  font-size: 1.5rem;
 }
 
+/* Icono dentro del summary */
 .seccion__icono {
-    display: block;
-    text-align: center;
-    font-size: 2.3em;
+  display: block;
+  text-align: center;
+  font-size: 2.3em;
 }
+
+/* Contenido desplegado */
 .seccion__contenido {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 61, 151, 0.9); /* fondo sólido */
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+/* Imagen de fondo por sección: aplicada al summary */
+.seccion__contenedor--historia .seccion__titulo {
+  background-image: url("../IMG/SECCIONES_PORTADAS/portadaHistoria.jpg");
+}
+
+.seccion__contenedor--congresos .seccion__titulo {
+  background-image: url("../IMG/SECCIONES_PORTADAS/portadaCongreso.jpg");
+}
+
+.seccion__contenedor--mesadirec .seccion__titulo {
+  background-image: url("../IMG/SECCIONES_PORTADAS/portadaMesaDirectiva.jpg");
+}
+
+.seccion__contenedor--contactos .seccion__titulo {
+  background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
+}
+
+.seccion__contenedor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: opacity 0.3s;
+  height: 100%; /* hasta aquí la imagen cubre solo el contenedor visible */
+}
+
+/* Capa azul con opacidad encima de la imagen */
+.seccion__contenedor::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 61, 151, 0.65); /* azul con opacidad */
+  z-index: 1;
 }
