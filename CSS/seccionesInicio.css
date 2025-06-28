@@ -5,45 +5,62 @@
   max-width: 1200px;
   box-sizing: border-box;
   margin: 0 auto;
+  gap: .3em;
 }
 
 /* Contenedor individual de cada sección */
 .seccion__contenedor {
-  box-sizing: border-box;
   position: relative;
-  padding: 1.5rem;
   overflow: hidden;
-  z-index: 0;
   flex: 1 1 360px;
   min-width: 360px;
   min-height: 260px;
   padding: 2rem;
+  box-sizing: border-box;
+  z-index: 0;
+  border-radius: 0.5rem;
 }
 
-/* Eliminamos fondos anteriores */
-.seccion__contenedor::before,
-.seccion__contenedor::after {
-  display: none;
+/*CAPA Transparente*/
+
+.contenedor__fondo{
+  position: absolute;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+  z-index: 1;
+  background-image: url("../IMG/SECCIONES_PORTADAS/portadaHistoria.jpg"); /* cambia por la imagen correspondiente */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none; /* para que no bloquee clics en summary */
+
+}
+
+/* Capa azul con opacidad encima de la imagen */
+.contenedor__fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#fff,#81a1eb9f,#0d3072a4);
+  z-index: 2; /* sigue debajo del texto */
 }
 
 /* Contenedor details */
 .seccion {
   position: relative;
-  z-index: 2;
-  color: #fff;
+  z-index: 3; /* Más alto que la capa de fondo */
+  color: white;
 }
 
 /* Título desplegable */
 .seccion__titulo {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding: 20px;
   margin: auto;
   cursor: pointer;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(0, 61, 151, 0.65); /* capa azul */
   color: #fff;
   border-radius: 0.5rem;
   padding: 2.5rem 1rem;
@@ -61,14 +78,15 @@
 .seccion__contenido {
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(0, 61, 151, 0.9); /* fondo sólido */
+  background: linear-gradient(#0d3072a4);
   margin-top: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   color: #fff;
+  z-index: 3;
 }
 
-/* Imagen de fondo por sección: aplicada al summary */
+/* Imagen de fondo por sección: aplicada al summary 
 .seccion__contenedor--historia .seccion__titulo {
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaHistoria.jpg");
 }
@@ -84,24 +102,6 @@
 .seccion__contenedor--contactos .seccion__titulo {
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
+  */
+  
 
-.seccion__contenedor::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-  transition: opacity 0.3s;
-  height: 100%; /* hasta aquí la imagen cubre solo el contenedor visible */
-}
-
-/* Capa azul con opacidad encima de la imagen */
-.seccion__contenedor::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 61, 151, 0.65); /* azul con opacidad */
-  z-index: 1;
-}
