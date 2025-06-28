@@ -4,8 +4,9 @@
   flex-wrap: wrap;
   max-width: 1200px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: .3em auto;
   gap: .3em;
+  font-weight: 550;
 }
 
 /* Contenedor individual de cada sección */
@@ -30,7 +31,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  pointer-events: none; /* para que no bloquee clics en summary */
+  pointer-events: none;
 
 }
 
@@ -40,7 +41,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(#fff,#81a1eb9f,#0d3072a4);
+  background: linear-gradient(#454f61,#81a1eb9f,#0d3072a4);
   z-index: 2; /* sigue debajo del texto */
 }
 
@@ -52,6 +53,7 @@
 }
 
 /* Título desplegable */
+/*Clase para summary*/
 .seccion__titulo {
   position: relative;
   z-index: 3;
@@ -65,17 +67,30 @@
   border-radius: 0.5rem;
   padding: 2.5rem 1rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
-/* Icono dentro del summary */
-.seccion__icono {
-  display: block;
-  text-align: center;
-  font-size: 2.3em;
+.seccion__titulo {
+  list-style: none;
+  text-shadow: 1px 2px 12px rgba(0, 0, 0,.7);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  line-height: 1;
+  font-weight: 650;
+  margin-top: 50px;
+}
+
+.seccion__titulo:hover {
+  transform: scale(1.05);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.seccion__titulo::-webkit-details-marker {
+  display: none;      
 }
 
 /* Contenido desplegado */
 .seccion__contenido {
+  
   width: 100%;
   box-sizing: border-box;
   background: linear-gradient(#0d3072a4);
@@ -102,5 +117,9 @@
 .contenedor_fondo--contactos {
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
+
+/*Ponerle font-family a toda la pagina*/
+
+/*Editar el details */
   
 
