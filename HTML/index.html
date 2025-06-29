@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Montserrat:ital@0;1&family=Raleway:ital,wght@0,344;1,344&display=swap"
       rel="stylesheet"
     />
+    <script src="../JS/main.js" defer></script>
     <title>Inicio | SEM CAJEME</title>
   </head>
   <body class="raleway-default">
@@ -68,72 +69,52 @@
             playsinline
           ></video>
         </div>
-        <!--Div que  details y summary de algunas opciones sobre sem -->
+        <!--contenedor principal de secciones -->
         <div class="inicio__secciones">
-          <div class="seccion__contenedor">
+          <!--Contenedor historia-->
+          <div class="seccion__contenedor" onclick="mostrarDetalle('historia')">
             <!--fondo del contenedor -->
             <div class="contenedor__fondo contenedor_fondo--historia"></div>
-            <details class="seccion">
-              <summary class="seccion__titulo">Historia</summary>
-              <div class="seccion__contenido">
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Alias fugit assumenda omnis nesciunt laborum facere quisquam
-                  ex illo praesentium dicta quis hic, cumque laudantium
-                  blanditiis mollitia ab, nulla necessitatibus laboriosam?
-                </p>
-              </div>
-            </details>
+            <div class="seccion__titulo">Historia</div>
           </div>
 
-          <div class="seccion__contenedor">
+          <!--Contenedor congresos-->
+          <div
+            class="seccion__contenedor"
+            onclick="mostrarDetalle('congresos')"
+          >
             <div class="contenedor__fondo contenedor_fondo--congresos"></div>
-            <details class="seccion">
-              <summary class="seccion__titulo">Congresos</summary>
-              <div class="seccion__contenido">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto tempore necessitatibus, sint facilis, ipsam
-                  eligendi minus exercitationem ea at nihil laudantium a
-                  deleniti doloribus cupiditate voluptatum? Deleniti voluptate
-                  tempora quis?
-                </p>
-              </div>
-            </details>
+            <div class="seccion__titulo">Congresos</div>
           </div>
 
-          <div class="seccion__contenedor">
+          <!--Contenedor mesaDirectiva-->
+          <div
+            class="seccion__contenedor"
+            onclick="mostrarDetalle('mesaDirec')"
+          >
             <div class="contenedor__fondo contenedor_fondo--mesadirec"></div>
-            <details class="seccion">
-              <summary class="seccion__titulo">Mesa directiva</summary>
-              <div class="seccion__contenido">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minus, doloribus optio illum doloremque explicabo, voluptas
-                  fuga facere nulla dolorum commodi molestias. Rem nemo,
-                  consequatur vitae sequi reprehenderit dicta molestias
-                  blanditiis?
-                </p>
-              </div>
-            </details>
+            <div class="seccion__titulo">Mesa directiva</div>
           </div>
 
-          <div class="seccion__contenedor">
+          <!--contenedor contactos-->
+          <div
+            class="seccion__contenedor"
+            onclick="mostrarDetalle('contactos')"
+          >
             <div class="contenedor__fondo contenedor_fondo--contactos"></div>
-            <details class="seccion">
-              <summary class="seccion__titulo">Contactos</summary>
-              <div class="seccion__contenido">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                  nostrum tempora nemo fugit iure labore aperiam nesciunt culpa
-                  asperiores, sint voluptas laborum eaque nisi possimus
-                  voluptates illo temporibus dolorem ratione!
-                </p>
-              </div>
-            </details>
+            <div class="seccion__titulo">Contactos</div>
           </div>
         </div>
       </div>
+      
+      <!--Contenido despegable-->
+      <!-- Contenedor inferior (desplegable) -->
+       <!---
+      <div class="detalle__contenedor" id="detalleContenedor">
+        <button class="detalle__cerrar" onclick="cerrarDetalle()">X</button>
+        <div class="detalle__contenido" id="detalleContenido"></div>
+      </div>
+    -->
     </section>
   </body>
 </html>

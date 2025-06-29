@@ -1,48 +1,44 @@
 /* Contenedor general con flex-wrap */
 .inicio__secciones {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1200px;
-  box-sizing: border-box;
-  margin: .3em auto;
-  gap: .3em;
+  width: 100%;
+  margin: 0.5em 0;
+  gap: 0.3em;
   font-weight: 550;
+  justify-content: flex-start;
+  max-height: 600px; /* o min-height */
 }
 
 /* Contenedor individual de cada sección */
 .seccion__contenedor {
   position: relative;
   overflow: hidden;
-  flex: 1 1 360px;
-  min-width: 360px;
-  max-height: 260px;
-  min-height: 260px;
-  padding: 2rem;
-  box-sizing: border-box;
+  flex: 1 1 300px;
+  padding: 1rem;
   z-index: 0;
   border-radius: 0.5rem;
-  box-sizing: border-box;
+  min-height: 200px; /* Ahora funciona */
 }
 
 /*CAPA Transparente*/
 
-.contenedor__fondo{
+.contenedor__fondo {
   position: absolute;
   inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
   z-index: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
-
 
 /* Capa azul con opacidad encima de la imagen */
 .contenedor__fondo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(#454f61,#81a1eb9f,#0d3072a4);
+  background: linear-gradient(#454f61, #81a1eb9f, #0d3072a4);
   z-index: 2; /* sigue debajo del texto */
 }
 
@@ -73,7 +69,7 @@
 
 .seccion__titulo {
   list-style: none;
-  text-shadow: 1px 2px 12px rgba(0, 0, 0,.7);
+  text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease, text-shadow 0.3s ease;
   line-height: 1;
   font-weight: 650;
@@ -86,7 +82,7 @@
 }
 
 .seccion__titulo::-webkit-details-marker {
-  display: none;      
+  display: none;
 }
 
 /* Contenido desplegado */
@@ -117,8 +113,32 @@
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
 
-/*Ponerle font-family a toda la pagina*/
+/*CONTENEDOR DESPEGABLE*/
+.detalle__contenedor {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #0d3072;
+  color: white;
+  transition: max-height 0.5s ease;
+  padding: 0 2rem;
+}
 
-/*Editar el details */
-  
+.detalle__contenedor.activo {
+  max-height: 300px;
+  padding: 2rem;
+}
 
+.detalle__contenido {
+  font-size: 1.2rem;
+}
+
+.detalle__cerrar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}

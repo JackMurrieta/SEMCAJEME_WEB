@@ -15,10 +15,11 @@
     #2f2f2f60,
     transparent
   ); /* gradiente oscuro */
-  position: sticky; /* se queda fija arriba al hacer scroll */
+  position: fixed;
   top: 0;
   z-index: 1000;
   font-weight: 800;
+  width: 100%;
 }
 .navbar__list {
   list-style: none;
@@ -45,6 +46,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
+  text-shadow: 1px 2px 12px rgb(0, 0, 0);
 }
 
 .link__item:hover {
