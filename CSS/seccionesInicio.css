@@ -15,11 +15,13 @@
   overflow: hidden;
   flex: 1 1 360px;
   min-width: 360px;
+  max-height: 260px;
   min-height: 260px;
   padding: 2rem;
   box-sizing: border-box;
   z-index: 0;
   border-radius: 0.5rem;
+  box-sizing: border-box;
 }
 
 /*CAPA Transparente*/
@@ -31,7 +33,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  pointer-events: none;
 
 }
 
@@ -90,7 +91,6 @@
 
 /* Contenido desplegado */
 .seccion__contenido {
-  
   width: 100%;
   box-sizing: border-box;
   background: linear-gradient(#0d3072a4);
@@ -98,7 +98,6 @@
   padding: 1rem;
   border-radius: 0.5rem;
   color: #fff;
-  z-index: 3;
 }
 
 /* Imagen de fondo por sección: aplicada al summary */
