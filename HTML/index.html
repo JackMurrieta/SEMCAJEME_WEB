@@ -9,9 +9,10 @@
       href="../IMG/logoSemCajeme_default.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/navbarMobile.css" />
     <link rel="stylesheet" href="../CSS/seccionesInicio.css" />
     <link rel="stylesheet" href=../CSS/video.css>
+    <link rel="stylesheet" href="../CSS/tipografias.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,32 +23,42 @@
     <title>Inicio | SEM CAJEME</title>
   </head>
   <body class="raleway-default">
-    <header>
-      <nav class="navbar raleway-bold">
-        <!--Botton navbar-Hamburguesa -->
+    <header class="header">
+      <!--Boton de menu despegable -->
+      <button
+        class="nav__toggle"
+        id="navToggle"
+        onclick="mostrarMenu()"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <!--Simbolo  ☰  -->
+        &#9776;
+      </button>
 
-        <ul class="navbar__list">
-          <!-- Logo  SEMCAJEME-->
-          <li>
-            <a href="index.html" class="nav__logo-link">
-              <img
-                src="../IMG/logoSemCajeme.png"
-                alt="Logo Sociedad de Alumnos"
-                class="nav__logo"
-              />
-            </a>
-          </li>
+      <!--Logo SEMCAJEME-->
+      <div class="nav__logo-contenedor">
+        <a href="index.html">
+          <img
+            src="../IMG/logoSemCajeme.png"
+            alt="logo sociedad de alumnos de medicina Cajeme"
+            class="nav__logo"
+          />
+        </a>
+      </div>
 
-          <li class="list__item">
+      <nav class="header__nav raleway-bold">
+        <ul class="header__nav-list">
+          <li class="nav__item">
             <a href="comunidad.html" class="link__item">COMUNIDAD</a>
           </li>
-          <li class="list__item">
+          <li class="nav__item">
             <a href="eduacion.html" class="link__item">EDUCACIÓN</a>
           </li>
-          <li class="list__item">
+          <li class="nav__item">
             <a href="comites.html" class="link__item">COMITES</a>
           </li>
-          <li class="list__item">
+          <li class="nav__item">
             <a href="consultBienestar.html" class="link__item"
               >CONSULTORIO BIENESTAR</a
             >
@@ -55,6 +66,7 @@
         </ul>
       </nav>
     </header>
+
     <!--Seccion inicio-->
     <section>
       <div class="inicio__contenedor">
@@ -106,15 +118,14 @@
           </div>
         </div>
       </div>
-      
+
       <!--Contenido despegable-->
       <!-- Contenedor inferior (desplegable) -->
-       <!---
+      <!---
       <div class="detalle__contenedor" id="detalleContenedor">
         <button class="detalle__cerrar" onclick="cerrarDetalle()">X</button>
         <div class="detalle__contenido" id="detalleContenido"></div>
       </div>
-    -->
-    </section>
+    --></section>
   </body>
 </html>

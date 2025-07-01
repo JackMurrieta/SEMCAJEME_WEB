@@ -1,18 +1,11 @@
-  const contenidos = {
-    historia: "Contenido sobre la historia del SEM...",
-    congresos: "Contenido sobre los congresos realizados...",
-    mesaDirec: "Contenido de la mesa directiva de SEM CAJEME",
-    contactos:"Contenido de contactoas de la sem cajeme"
-  };
+function mostrarMenu() {
+  const nav = document.querySelector('.header__nav');
+  const toggle = document.getElementById('navToggle');
+  
+  nav.classList.toggle('header__nav--visible');
+  toggle.classList.toggle('nav__toggle--abierto');
 
-  function mostrarDetalle(seccion) {
-    const contenedor = document.getElementById("detalleContenedor");
-    const contenido = document.getElementById("detalleContenido");
-    
-    contenido.innerHTML = contenidos[seccion] || "Sin contenido.";
-    contenedor.classList.add("activo");
-  }
-
-  function cerrarDetalle() {
-    document.getElementById("detalleContenedor").classList.remove("activo");
-  }
+  // Alternar el valor de aria-expanded
+  const expanded = toggle.getAttribute('aria-expanded') === 'true';
+  toggle.setAttribute('aria-expanded', String(!expanded));
+}

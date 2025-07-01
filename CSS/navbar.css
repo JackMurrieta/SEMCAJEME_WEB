@@ -1,46 +1,69 @@
-/*TIPOGRAFIAS*/
-.raleway-default {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+body {
+  background-color: #e2eaff;
+  color: #101632dd;
 }
 
-.navbar {
-  margin:-10px;
-  padding: 0.5rem 1rem; /* un poco de espacio interno */
-  background: linear-gradient(
-    to bottom,
-    #1c1c1c93,
-    #2f2f2f60,
-    transparent
-  ); /* gradiente oscuro */
+body,
+div,
+ul,
+nav,
+header,
+footer,
+a,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+}
+
+.header__nav {
+  margin: -10px;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to bottom, #1c1c1c93, #2f2f2f60, transparent);
   position: fixed;
   top: 0;
   z-index: 1000;
   font-weight: 800;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 }
-.navbar__list {
+
+.nav__logo-contenedor {
+  margin-right: 2em;
+  margin-left: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vh;
+}
+
+.nav__logo {
+  max-width: 100%;
+}
+
+/* Menú principal */
+.header__nav-list {
   list-style: none;
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
   font-size: 15px;
+  gap: 1rem;
 }
 
-.nav__logo-link {
-    text-decoration: none;
-    margin: 50px
-
-}
-.nav__logo {
-  width: 15vh;
-}
+/* Estilos de cada ítem del menú */
 .list__item {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
+
 .link__item {
   color: #ffffff;
   text-decoration: none;
@@ -57,4 +80,66 @@
   transition: all 0.3s ease;
 }
 
-/*Boton hamburguesa*/
+/* Botón hamburguesa */
+.nav__toggle {
+  margin-left: auto;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #113b8a;
+  cursor: pointer;
+  display: none; /* oculto por defecto */
+}
+
+/* Responsive: menú hamburguesa */
+@media (max-width: 1050px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #1c1c1c93, #2f2f2f60, #fff);
+  }
+  /*Al clickear el boton de menu*/
+  /*display block position absolute*/
+  .nav__logo-contenedor{
+    width: 13vh;
+    margin: 0;
+    padding-left: .5em;
+    padding-top: .5em;
+  }
+  .nav__logo{
+    padding: 0;
+    margin: 0;
+  }
+  .nav__toggle {
+    padding-right: .5em;
+    display: block;
+    font-size: 2.7em;
+    align-self: center;
+    font-weight: 600;
+    text-shadow: 1px 2px 12px rgb(0, 0, 0);
+  }
+
+  .header__nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1c1c1cef;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+
+  .header__nav-list.active {
+    display: flex;
+  }
+
+  .list__item {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}

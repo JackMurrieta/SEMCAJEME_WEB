@@ -5,10 +5,11 @@
   display: flex;;
   flex-direction: column;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 .contenedor__video {
-  max-width: 100%; /* o 600px, 80%, etc. */
+  max-width: 100%;
   aspect-ratio: 16/9;
   height: 35em;
   margin: auto;
@@ -17,3 +18,5 @@
 .inicio__video {
   width: 100%;
 }
+
+
