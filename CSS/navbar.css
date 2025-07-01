@@ -1,8 +1,7 @@
-body {
-  background-color: #e2eaff;
-  color: #101632dd;
+/* RESET GENERAL */
+* {
+  box-sizing: border-box;
 }
-
 body,
 div,
 ul,
@@ -16,130 +15,126 @@ button {
   padding: 0;
 }
 
-.header {
-  display: flex;
+body {
+  background-color: #ffffff;
+  color: #101632dd;
 }
 
-.header__nav {
-  margin: -10px;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(to bottom, #1c1c1c93, #2f2f2f60, transparent);
-  position: fixed;
+/* BARRA DE NAVEGACIÓN */
+.header {
+  position: sticky;
   top: 0;
-  z-index: 1000;
-  font-weight: 800;
-  width: 100%;
+  background: linear-gradient(to bottom, #1c1c1c93, #2f2f2f60, transparent);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  container-type: inline-size;
+  container-name: header;
+  padding: 0.5rem 1rem;
+  z-index: 100;
 }
 
 .nav__logo-contenedor {
-  margin-right: 2em;
-  margin-left: .5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 15vh;
+  max-width: 6em;
 }
 
 .nav__logo {
-  max-width: 100%;
+  width: 100%;
+  margin: 10px 20px;
 }
 
-/* Menú principal */
-.header__nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  font-size: 15px;
-  gap: 1rem;
-}
-
-/* Estilos de cada ítem del menú */
-.list__item {
-  margin: 0 0.5rem;
-}
-
-.link__item {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-  text-shadow: 1px 2px 12px rgb(0, 0, 0);
-}
-
-.link__item:hover {
-  color: white;
-  background-color: #113b8a;
-  padding: 5px 10px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-/* Botón hamburguesa */
 .nav__toggle {
-  margin-left: auto;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
   background: none;
   border: none;
   color: #113b8a;
   cursor: pointer;
-  display: none; /* oculto por defecto */
+  position: absolute;
+  right: 10px;
+  padding: 0rem 1rem 0.5rem 0;
+  text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.631);
+  z-index: 1001;
 }
 
-/* Responsive: menú hamburguesa */
-@media (max-width: 1050px) {
+.header__nav {
+  display: none;
+  background: linear-gradient(to top, #101632, #113b8af3, #2651be);
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Cuando el menú está activo */
+.header__nav--visible {
+  display: flex;
+}
+
+.nav__toggle--abierto {
+  color: #fff;
+}
+
+/* Lista de navegación móvil */
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: 600;
+  gap: 1em;
+}
+
+/* Enlaces */
+.link__item {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: 1px 2px 12px rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+
+/* ESTILOS PARA ESCRITORIO */
+@media (min-width: 800px) {
   .header {
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
+
+  .nav__logo-contenedor {
+    margin: 0 3.5em 0 1em;
+  }
+
   .header__nav {
+    display: flex !important;
     position: static;
-    display: flex;
+    height: auto;
+    width: auto;
+    background: none;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(to bottom, #1c1c1c93, #2f2f2f60, #fff);
-  }
-  /*Al clickear el boton de menu*/
-  /*display block position absolute*/
-  .nav__logo-contenedor{
-    width: 13vh;
-    margin: 0;
-    padding-left: .5em;
-    padding-top: .5em;
-  }
-  .nav__logo{
-    padding: 0;
-    margin: 0;
-  }
-  .nav__toggle {
-    padding-right: .5em;
-    display: block;
-    font-size: 2.7em;
-    align-self: center;
-    font-weight: 600;
-    text-shadow: 1px 2px 12px rgb(0, 0, 0);
+    gap: 3em;
   }
 
   .header__nav-list {
+    flex-direction: row;
+    font-size: 15px;
+    padding-right: 3em;
+    gap:2em;
+  }
+
+  .link__item:hover {
+    color: white;
+    background-color: #113b8a;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .nav__toggle {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #1c1c1cef;
-    padding: 1rem 0;
-    margin-top: 0.5rem;
-  }
-
-  .header__nav-list.active {
-    display: flex;
-  }
-
-  .list__item {
-    margin: 0.5rem 0;
-    text-align: center;
   }
 }
