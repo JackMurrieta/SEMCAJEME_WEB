@@ -1,7 +1,7 @@
 /* Contenedor de secciones en grid */
 .inicio__secciones {
   display: grid;
-  grid-template-columns:repeat(4,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   width: 100%;
   margin: 0.5em 0;
   gap: 0.3em;
@@ -41,15 +41,12 @@
   z-index: 2; /* sigue debajo del texto */
 }
 
-/* Contenedor details */
 .seccion {
   position: relative;
   z-index: 3; /* Más alto que la capa de fondo */
   color: white;
 }
 
-/* Título desplegable */
-/*Clase para summary*/
 .seccion__titulo {
   position: relative;
   z-index: 3;
@@ -75,24 +72,10 @@
   margin-top: 50px;
 }
 
+/*Hover del titulo de la grilla*/
 .seccion__titulo:hover {
   transform: scale(1.05);
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
-}
-
-.seccion__titulo::-webkit-details-marker {
-  display: none;
-}
-
-/* Contenido desplegado */
-.seccion__contenido {
-  width: 100%;
-  box-sizing: border-box;
-  background: linear-gradient(#0d3072a4);
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  color: #fff;
 }
 
 /* Imagen de fondo por sección: aplicada al summary */
@@ -112,32 +95,5 @@
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
 
-/*CONTENEDOR DESPEGABLE*/
-.detalle__contenedor {
-  max-height: 0;
-  overflow: hidden;
-  background-color: #0d3072;
-  color: white;
-  transition: max-height 0.5s ease;
-  padding: 0 2rem;
-}
 
-.detalle__contenedor.activo {
-  max-height: 300px;
-  padding: 2rem;
-}
 
-.detalle__contenido {
-  font-size: 1.2rem;
-}
-
-.detalle__cerrar {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}

@@ -19,4 +19,13 @@
   width: 100%;
 }
 
+@media (max-width:850px){
+  .contenedor__video{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5em;
+    height: fit-content;
+  }
+}
+
 
