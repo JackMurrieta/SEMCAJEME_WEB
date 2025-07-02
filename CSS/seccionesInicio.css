@@ -1,13 +1,16 @@
 /* Contenedor de secciones en grid */
 .inicio__secciones {
   display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  justify-content: baseline;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   margin: 0.5em 0;
   gap: 0.3em;
   font-weight: 550;
   justify-content: center;
-  max-height: 600px; /* o min-height */
+  max-height: fit-content; /* o min-height */
 }
 
 /* Contenedor individual de cada sección */
@@ -15,17 +18,18 @@
   position: relative;
   overflow: hidden;
   flex: 1 1 300px;
+  display: flex;
   padding: 1rem;
   z-index: 0;
   border-radius: 0.5rem;
-  min-height: 200px; /* Ahora funciona */
+  min-height: 200px;
 }
 
 /*CAPA Transparente*/
 
 .contenedor__fondo {
   position: absolute;
-  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+  inset: 0;
   z-index: 1;
   background-size: cover;
   background-position: center;
@@ -69,7 +73,8 @@
   transition: transform 0.3s ease, text-shadow 0.3s ease;
   line-height: 1;
   font-weight: 650;
-  margin-top: 50px;
+  margin: auto;
+  justify-content: center;
 }
 
 /*Hover del titulo de la grilla*/
@@ -95,5 +100,15 @@
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
 
+@media (max-width: 500px) {
+  .inicio__secciones {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-
+  .seccion__contenedor {
+    min-height: auto;
+  }
+  .seccion__titulo{
+    font-size: 1.1em;
+  }
+}
