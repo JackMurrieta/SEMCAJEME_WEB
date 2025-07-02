@@ -84,7 +84,7 @@
         <!--contenedor principal de secciones -->
         <div class="inicio__secciones">
           <!--Contenedor historia-->
-          <div class="seccion__contenedor" onclick="mostrarDetalle('historia')">
+          <div class="seccion__contenedor" onclick="mostrarInfoContenedor(this,'historia')">
             <!--fondo del contenedor -->
             <div class="contenedor__fondo contenedor_fondo--historia"></div>
             <div class="seccion__titulo">Historia</div>
@@ -93,7 +93,7 @@
           <!--Contenedor congresos-->
           <div
             class="seccion__contenedor"
-            onclick="mostrarDetalle('congresos')"
+            onclick="mostrarInfoContenedor(this,'congresos')"
           >
             <div class="contenedor__fondo contenedor_fondo--congresos"></div>
             <div class="seccion__titulo">Congresos</div>
@@ -102,7 +102,7 @@
           <!--Contenedor mesaDirectiva-->
           <div
             class="seccion__contenedor"
-            onclick="mostrarDetalle('mesaDirec')"
+            onclick="mostrarInfoContenedor(this,'mesaDirec')"
           >
             <div class="contenedor__fondo contenedor_fondo--mesadirec"></div>
             <div class="seccion__titulo">Mesa directiva</div>
@@ -111,21 +111,16 @@
           <!--contenedor contactos-->
           <div
             class="seccion__contenedor"
-            onclick="mostrarDetalle('contactos')"
+            onclick="mostrarInfoContenedor(this,'contactos')"
           >
             <div class="contenedor__fondo contenedor_fondo--contactos"></div>
             <div class="seccion__titulo">Contactos</div>
           </div>
         </div>
+        <!--Contenedor despegable -->
+        <div class="contenedor-detalle"></div>
       </div>
 
-      <!--Contenido despegable-->
-      <!-- Contenedor inferior (desplegable) -->
-      <!---
-      <div class="detalle__contenedor" id="detalleContenedor">
-        <button class="detalle__cerrar" onclick="cerrarDetalle()">X</button>
-        <div class="detalle__contenido" id="detalleContenido"></div>
-      </div>
-    --></section>
+    </section>
   </body>
 </html>
