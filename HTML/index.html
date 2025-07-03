@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../CSS/tipografias.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--icono de cierre-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Montserrat:ital@0;1&family=Raleway:ital,wght@0,344;1,344&display=swap"
       rel="stylesheet"
@@ -84,7 +89,11 @@
         <!--contenedor principal de secciones -->
         <div class="inicio__secciones">
           <!--Contenedor historia-->
-          <div class="seccion__contenedor" onclick="mostrarInfoContenedor(this,'historia')">
+          <div
+            class="seccion__contenedor"
+            aria-label="mostrar detalle historia"
+            onclick="mostrarInfoContenedor(this,'historia')"
+          >
             <!--fondo del contenedor -->
             <div class="contenedor__fondo contenedor_fondo--historia"></div>
             <div class="seccion__titulo">Historia</div>
@@ -94,6 +103,7 @@
           <div
             class="seccion__contenedor"
             onclick="mostrarInfoContenedor(this,'congresos')"
+            aria-label="mostrar detalle congresos"
           >
             <div class="contenedor__fondo contenedor_fondo--congresos"></div>
             <div class="seccion__titulo">Congresos</div>
@@ -103,6 +113,7 @@
           <div
             class="seccion__contenedor"
             onclick="mostrarInfoContenedor(this,'mesaDirec')"
+            aria-label="mostrar detalle mesa directiva"
           >
             <div class="contenedor__fondo contenedor_fondo--mesadirec"></div>
             <div class="seccion__titulo">Mesa directiva</div>
@@ -112,15 +123,16 @@
           <div
             class="seccion__contenedor"
             onclick="mostrarInfoContenedor(this,'contactos')"
+            aria-label="mostrar detalle contactos"
           >
             <div class="contenedor__fondo contenedor_fondo--contactos"></div>
             <div class="seccion__titulo">Contactos</div>
           </div>
         </div>
+
         <!--Contenedor despegable -->
         <div class="contenedor-detalle"></div>
       </div>
-
     </section>
   </body>
 </html>
