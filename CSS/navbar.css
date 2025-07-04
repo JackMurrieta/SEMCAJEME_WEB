@@ -1,11 +1,7 @@
 /* RESET GENERAL */
 * {
   box-sizing: border-box;
-}
-
-html{
   scroll-behavior: smooth;
-
 }
 
 body,
@@ -47,7 +43,7 @@ body {
 
 .nav__logo {
   width: 100%;
-  margin:0;
+  margin: 0;
   height: 100%;
 }
 
@@ -133,7 +129,7 @@ body {
     flex-direction: row;
     font-size: 15px;
     padding-right: 3em;
-    gap:2em;
+    gap: 2em;
   }
 
   .link__item:hover {
