@@ -1,0 +1,99 @@
+/* Contenedor general */
+#noticias {
+  padding: 2em;
+  background-color: #e0e7f3;
+  text-align: center;
+}
+
+
+/* Contenedor del carrusel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Track que contiene todos los slides */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide */
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+/* Tarjeta individual */
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  overflow: hidden;
+  max-width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: #0d3072;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+/* Botones de navegación */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Responsive: 1 tarjeta por fila en móvil */
+@media (max-width: 600px) {
+  .carousel-slide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}

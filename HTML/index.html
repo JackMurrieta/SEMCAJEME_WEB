@@ -20,6 +20,8 @@
       href="../IMG/logoSemCajeme_default.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="../CSS/noticias.css" />
+    <link rel="stylesheet" href="../CSS/contenedores_seccion.css" />
     <link rel="stylesheet" href="../CSS/navbar.css" />
     <link rel="stylesheet" href="../CSS/seccionesInicio.css" />
     <link rel="stylesheet" href=../CSS/video.css>
@@ -38,6 +40,7 @@
     />
 
     <script src="../JS/main.js" defer></script>
+    <script src="../JS/slider.js" defer></script>
     <title>Inicio | SEM CAJEME</title>
   </head>
   <body class="raleway-default">
@@ -84,69 +87,119 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <!--Seccion inicio-->
+      <section>
+        <div class="contenedor__seccion contenedor__seccion--inicio">
+          <!--Contenedor video principal-->
+          <div class="contenedor__video">
+            <video
+              class="inicio__video"
+              src="../VIDEOS/@SEMCAJEME.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+          <!--contenedor principal de secciones -->
+          <div class="inicio__secciones">
+            <!--Contenedor historia-->
+            <div
+              class="seccion__contenedor"
+              aria-label="mostrar detalle historia"
+              onclick="mostrarInfoContenedor(this,'historia')"
+            >
+              <!--fondo del contenedor -->
+              <div class="contenedor__fondo contenedor_fondo--historia"></div>
+              <div class="seccion__titulo">Historia</div>
+            </div>
 
-    <!--Seccion inicio-->
-    <section>
-      <div class="inicio__contenedor">
-        <!--Contenedor video principal-->
-        <div class="contenedor__video">
-          <video
-            class="inicio__video"
-            src="../VIDEOS/@SEMCAJEME.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-          ></video>
+            <!--Contenedor congresos-->
+            <div
+              class="seccion__contenedor"
+              onclick="mostrarInfoContenedor(this,'congresos')"
+              aria-label="mostrar detalle congresos"
+            >
+              <div class="contenedor__fondo contenedor_fondo--congresos"></div>
+              <div class="seccion__titulo">Congresos</div>
+            </div>
+
+            <!--Contenedor mesaDirectiva-->
+            <div
+              class="seccion__contenedor"
+              onclick="mostrarInfoContenedor(this,'mesaDirec')"
+              aria-label="mostrar detalle mesa directiva"
+            >
+              <div class="contenedor__fondo contenedor_fondo--mesadirec"></div>
+              <div class="seccion__titulo">Mesa directiva</div>
+            </div>
+
+            <!--contenedor contactos-->
+            <div
+              class="seccion__contenedor"
+              onclick="mostrarInfoContenedor(this,'contactos')"
+              aria-label="mostrar detalle contactos"
+            >
+              <div class="contenedor__fondo contenedor_fondo--contactos"></div>
+              <div class="seccion__titulo">Contactos</div>
+            </div>
+          </div>
+
+          <!--Contenedor despegable -->
+          <div class="contenedor-detalle"></div>
         </div>
-        <!--contenedor principal de secciones -->
-        <div class="inicio__secciones">
-          <!--Contenedor historia-->
-          <div
-            class="seccion__contenedor"
-            aria-label="mostrar detalle historia"
-            onclick="mostrarInfoContenedor(this,'historia')"
-          >
-            <!--fondo del contenedor -->
-            <div class="contenedor__fondo contenedor_fondo--historia"></div>
-            <div class="seccion__titulo">Historia</div>
+      </section>
+
+      <!--SEM NOTICIAS-->
+      <section id="noticias">
+        <div class=" contenedor__seccion carousel-container">
+          <h2 class="titulo__seccion">NOTICIAS</h2>
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <div class="card">
+                <img src="../IMG/logoSemCajeme.png" alt="Descripción 1" />
+                <h3 class="card-title">
+                  <a href="#ENLACE">Evento 1</a>
+                </h3>
+              </div>
+              <div class="card">
+                <img src="../IMG/logoSemCajeme.png" alt="Descripción 2" />
+                <h3 class="3ENLACEcard-title">
+                  <a href="">Evento 2</a>
+                </h3>
+              </div>
+              <!-- puedes agregar más tarjetas por slide -->
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <div class="card">
+                <img src="../IMG/logoSemCajeme.png" alt="Descripción 3" />
+                <h3 class="card-title">
+                  <a href="#ENLACE">Evento 3</a>
+                </h3>
+              </div>
+              <div class="card">
+                <img src="../IMG/logoSemCajeme.png" alt="Descripción 4" />
+                <h3 class="card-title">
+                  <a href="#ENLACE">Evento 4</a>
+                </h3>
+              </div>
+            </div>
           </div>
 
-          <!--Contenedor congresos-->
-          <div
-            class="seccion__contenedor"
-            onclick="mostrarInfoContenedor(this,'congresos')"
-            aria-label="mostrar detalle congresos"
-          >
-            <div class="contenedor__fondo contenedor_fondo--congresos"></div>
-            <div class="seccion__titulo">Congresos</div>
-          </div>
-
-          <!--Contenedor mesaDirectiva-->
-          <div
-            class="seccion__contenedor"
-            onclick="mostrarInfoContenedor(this,'mesaDirec')"
-            aria-label="mostrar detalle mesa directiva"
-          >
-            <div class="contenedor__fondo contenedor_fondo--mesadirec"></div>
-            <div class="seccion__titulo">Mesa directiva</div>
-          </div>
-
-          <!--contenedor contactos-->
-          <div
-            class="seccion__contenedor"
-            onclick="mostrarInfoContenedor(this,'contactos')"
-            aria-label="mostrar detalle contactos"
-          >
-            <div class="contenedor__fondo contenedor_fondo--contactos"></div>
-            <div class="seccion__titulo">Contactos</div>
-          </div>
+          <!-- Botones -->
+          <button onclick="mostrarSiguiente()" class="carousel-btn prev">
+            &#10094;
+          </button>
+          <button onclick="mostrarAnterior()" class="carousel-btn next">
+            &#10095;
+          </button>
         </div>
-
-        <!--Contenedor despegable -->
-        <div class="contenedor-detalle"></div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
