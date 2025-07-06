@@ -1,3 +1,4 @@
+/*TOGGLE MENU BOTON RESPONSIVE*/
 function mostrarMenu() {
   const nav = document.querySelector(".header__nav");
   const toggle = document.getElementById("navToggle");
@@ -10,13 +11,13 @@ function mostrarMenu() {
   toggle.setAttribute("aria-expanded", String(!expanded));
 }
 
+/*CERRAR Y MOSTRAR INFO DESPEGABLE*/
 function mostrarInfoContenedor(elemento, id) {
   let ids = ["historia", "congresos", "mesaDirec", "Contactos"];
 
   const detalleAnterior = document.querySelector(".detalle-seccion");
 
   if (detalleAnterior !== null) {
-    // 💡 Asegúrate de que el contenedor tenga ID asignado
     if (detalleAnterior.id === id) {
       detalleAnterior.remove(); // Cierra si ya está abierto el mismo
       return;
@@ -28,7 +29,7 @@ function mostrarInfoContenedor(elemento, id) {
   // Crear nuevo contenedor
   const detalle = document.createElement("div");
   detalle.className = "detalle-seccion";
-  detalle.id = id; 
+  detalle.id = id;
 
   let contenido = "";
   switch (id) {
@@ -79,13 +80,16 @@ function mostrarInfoContenedor(elemento, id) {
   } else {
     grid.appendChild(detalle);
   }
-  detalle.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  /*Posicionamiento final de la animacion*/
+  setTimeout(() => {
+    detalle.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, 100);
 }
 
-function cerrarContenedorDetalle(){
+function cerrarContenedorDetalle() {
   const detalleAnterior = document.querySelector(".detalle-seccion");
-   if (detalleAnterior) {
-      detalleAnterior.remove(); 
-
-}
+  if (detalleAnterior) {
+    detalleAnterior.remove();
+  }
 }
