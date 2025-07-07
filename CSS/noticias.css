@@ -4,15 +4,13 @@
   text-align: center;
   height: 100%;
   position: relative;
-  
 }
 /* Contenedor del carrusel */
 .contenedor__carrusel {
-  position: relative;
   overflow: hidden;
   max-width: 1000px;
   margin: auto;
-  height:auto;
+  height: auto;
 }
 
 /* Track que contiene todos los slides */
@@ -20,7 +18,7 @@
   display: flex;
   transition: transform 0.5s ease-in-out;
   justify-content: space-around;
-  gap: .5rem;
+  gap: 0.5rem;
   height: fit-content;
   margin: 1rem;
 }
@@ -50,7 +48,7 @@
 }
 
 .carta img {
-  width: 50%;/*porcentaje del contenedor de la caja carta*/
+  width: 50%; /*porcentaje del contenedor de la caja carta*/
   height: auto;
 }
 
@@ -85,21 +83,68 @@
 }
 
 .carousel-btn.prev {
-  left: 3em;
+  left: clamp(1em, 3vw, 3em);
 }
 
 .carousel-btn.next {
-  right: 3em;
+  right: clamp(1em, 3vw, 3em);
 }
 
-/* Responsive: 1 tarjeta por fila en móvil */
-@media (max-width: 600px) {
-  .carousel-slide {
+/* Smartphones pequeños (<=480px) */
+@media (max-width: 650px) {
+  .carrusel-slide {
     flex-direction: column;
     align-items: center;
   }
 
-  .card {
-    max-width: 90%;
+  .carta {
+    max-width: 55%;
+  }
+
+  .carta img {
+    width: 80%;
+  }
+
+  .carousel-btn {
+    font-size: 1.5em;
+  }
+}
+
+/* Tablets en vertical (601px a 768px) */
+@media (min-width: 650px) and (max-width: 768px) {
+  .carrusel-slide {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .carta {
+    max-width: 50%;
+  }
+
+  .carta img {
+    width: 60%;
+  }
+}
+
+/* Tablets en horizontal (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carta {
+    max-width: 40%;
+  }
+
+  .carta img {
+    width: 55%;
+  }
+}
+
+/* Laptops (>1024px) */
+@media (min-width: 1025px) {
+  .carta {
+    max-width: 50%;
+  }
+
+  .carta img {
+    width: 50%;
   }
 }
