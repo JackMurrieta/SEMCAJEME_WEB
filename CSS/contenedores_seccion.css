@@ -5,13 +5,11 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background-color:#e0e7f3 ;
 }
 
 .contenedor__seccion--inicio {
   flex-direction: column;
   box-sizing: border-box;
-  background-color: #fff;
 }
  
 

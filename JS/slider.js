@@ -1,5 +1,5 @@
-const track = document.querySelector(".carousel-track");
-const slides = document.querySelectorAll(".carousel-slide");
+const track = document.querySelector(".carrusel-track");
+const slides = document.querySelectorAll(".carrusel-slide");
 let currentIndex = 0;
 let slideInterval;
 
@@ -28,7 +28,7 @@ function iniciarAutoSlide() {
   slideInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % slides.length;
     actualizarPosicion();
-  }, 5000); // tiempo transicion
+  }, 5000); // tiempo transición
 }
 
 // Reinicia el temporizador del auto-slide
@@ -41,5 +41,5 @@ function reiniciarAutoSlide() {
 window.addEventListener("load", () => {
   actualizarPosicion();
   iniciarAutoSlide();
-  window.addEventListener("resize", updateSlidePosition);
+  window.addEventListener("resize", actualizarPosicion);
 });

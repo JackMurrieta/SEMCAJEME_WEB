@@ -159,9 +159,9 @@
 }
 
 /* Responsive tablets */
-@media screen and(min-width:767px) and(max-width: 1023px) {
+@media screen and (min-width:767px) and (max-width: 1050px) {
   .inicio__secciones {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
 
   .seccion__contenedor {
@@ -188,9 +188,8 @@
   }
 }
 
-/*pantallas con min:956px max:1260*/
-@media screen and (min-width: 956px) and (max-width: 1260px) {
+@media screen and (min-width: 1050px) and (max-width: 1260px) {
   .inicio__secciones {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 }

@@ -1,13 +1,12 @@
 /* Contenedor general */
 #noticias {
   padding: 2em;
-  background-color: #e0e7f3;
   text-align: center;
 }
 
 
 /* Contenedor del carrusel */
-.carousel-container {
+.contenedor__carrusel {
   position: relative;
   overflow: hidden;
   max-width: 1000px;
@@ -15,50 +14,50 @@
 }
 
 /* Track que contiene todos los slides */
-.carousel-track {
+.carrusel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
 /* Cada slide */
-.carousel-slide {
-  min-width: 100%;
+.carrusel-slide {
+  min-width: 105%;
   display: flex;
-  justify-content: center;
-  gap: 1em;
+  justify-content: space-evenly;
+  gap: 2em;
 }
 
 /* Tarjeta individual */
-.card {
+.carta {
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5em;
   overflow: hidden;
-  max-width: 200px;
+  max-width: 50%; /*porcentaje del contenedor padre */
   text-align: center;
   transition: transform 0.3s;
 }
 
-.card:hover {
+.carta:hover {
   transform: scale(1.05);
 }
 
-.card img {
-  width: 100%;
+.carta img {
+  width: 50%;/*porcentaje del contenedor de la caja carta*/
   height: auto;
 }
 
-.card-title {
+.carta-titulo {
   padding: 0.5em;
   font-size: 1em;
 }
 
-.card-title a {
+.carta-titulo a {
   text-decoration: none;
   color: #0d3072;
 }
 
-.card-title a:hover {
+.carta-titulo a:hover {
   text-decoration: underline;
 }
 
