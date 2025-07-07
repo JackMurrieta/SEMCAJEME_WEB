@@ -20,7 +20,7 @@
       href="../IMG/logoSemCajeme_default.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../CSS/index.css"/>
+    <link rel="stylesheet" href="../CSS/index.css" />
     <link rel="stylesheet" href="../CSS/noticias.css" />
     <link rel="stylesheet" href="../CSS/contenedores_seccion.css" />
     <link rel="stylesheet" href="../CSS/navbar.css" />
@@ -154,6 +154,13 @@
 
       <!--SEM NOTICIAS-->
       <section id="noticias">
+        <!-- Botones -->
+        <button onclick="mostrarSiguiente()" class="carousel-btn prev">
+          &#10094;
+        </button>
+        <button onclick="mostrarAnterior()" class="carousel-btn next">
+          &#10095;
+        </button>
         <div class="contenedor__seccion contenedor__carrusel">
           <h2 class="titulo__seccion">NOTICIAS</h2>
           <div class="carrusel-track">
@@ -182,14 +189,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Botones -->
-          <button onclick="mostrarSiguiente()" class="carousel-btn prev">
-            &#10094;
-          </button>
-          <button onclick="mostrarAnterior()" class="carousel-btn next">
-            &#10095;
-          </button>
         </div>
       </section>
     </main>
