@@ -66,7 +66,7 @@ function mostrarInfoContenedor(elemento, id) {
   </div>`;
 
   const grid = document.querySelector(".inicio__secciones");
-  const isMobile = window.innerWidth <= 954;
+  const isMobile = window.innerWidth <= 954; /*RESPONSIVE PIXELES*/
 
   if (isMobile) {
     const index = Array.from(grid.children).indexOf(elemento);

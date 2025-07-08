@@ -1,9 +1,8 @@
-
 .inicio__secciones {
   display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, minmax(clamp(180px, 22dvw, 300px), 1fr));
   grid-auto-rows: 1fr;
-  gap: 0.3em;
+  gap: clamp(0.3em, 1dvw, 1em);
   width: 100%;
   margin: 0.5em 0;
   font-weight: 550;
@@ -18,10 +17,10 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  padding: 1rem;
+  padding: clamp(0.5rem, 2dvw, 1rem);
   z-index: 0;
   border-radius: 0.5rem;
-  min-height: 200px;
+  min-height: clamp(150px, 25dvh, 250px);
 }
 
 /* Fondo con imagen */
@@ -53,8 +52,8 @@
   position: relative;
   z-index: 3;
   margin: auto;
-  padding: 2.5rem 1rem;
-  font-size: 1.5rem;
+  padding: clamp(1.5rem, 5dvh, 3rem) 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   text-align: center;
   cursor: pointer;
   color: #fff;
@@ -64,12 +63,10 @@
   transition: transform 0.3s ease, text-shadow 0.3s ease;
   line-height: 1;
   font-weight: 650;
-  list-style: none;
   display: flex;
   justify-content: center;
 }
 
-/* Hover en el título */
 .seccion__titulo:hover {
   transform: scale(1.05);
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
@@ -92,35 +89,33 @@
   background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
 
-/*Contenedor detalles despegable */
-/*Contenedor animado*/
+/* Contenedor desplegable */
 .detalle-seccion {
   grid-column: 1 / -1;
   background: linear-gradient(transparent, #81a1eb9f, #0d3072a4);
-  padding: 1em;
+  padding: clamp(0.5em, 2dvw, 1em);
   border-radius: 0.5rem;
   margin: 0.4em 0;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 200px;
-  /*propiedades de la animacion*/
+  min-height: clamp(150px, 20dvh, 250px);
   max-height: 0;
   opacity: 0;
   animation: desplegar 1s ease forwards;
   overflow: hidden;
 }
 
-/*Animacion*/
+/* Animación desplegable */
 @keyframes desplegar {
   0% {
     max-height: 0;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-100px);
   }
   100% {
-    max-height: 40vh;
+    max-height: 40dvh;
     opacity: 1;
     transform: translateY(0);
   }
@@ -130,24 +125,20 @@
   max-width: 800px;
   color: #1b2a4f;
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
-/*Boton cerrar contenedor detalle*/
-
+/* Botón cerrar */
 .contenedor-boton {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
   z-index: 10;
-  height: auto;
-  width: auto;
 }
 
-/*Boton Cerrar*/
 .boton-cerrar {
   font-variation-settings: "FILL" 0, "wght" 800, "GRAD" 200, "opsz" 48;
-  font-size: clamp(3rem, 4vw, 5vw);
+  font-size: clamp(2.5rem, 4vw, 5rem);
   cursor: pointer;
   background: none;
   border: none;
@@ -158,23 +149,8 @@
   display: inline-block;
 }
 
-/* Responsive tablets */
-@media screen and (min-width: 767px) and (max-width: 1050px) {
-  .inicio__secciones {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
-
-  .seccion__contenedor {
-    min-height: auto;
-  }
-
-  .seccion__titulo {
-    font-size: 1.1em;
-  }
-}
-
 /* Responsive smartphone */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 954px) {
   .inicio__secciones {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
@@ -185,11 +161,5 @@
 
   .seccion__titulo {
     font-size: 1.1em;
-  }
-}
-
-@media screen and (min-width: 1050px) and (max-width: 1260px) {
-  .inicio__secciones {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 }
