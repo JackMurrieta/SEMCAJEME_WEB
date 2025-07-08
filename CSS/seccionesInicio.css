@@ -1,4 +1,4 @@
-/* Contenedor de secciones en grid */
+
 .inicio__secciones {
   display: grid;
   grid-template-columns: repeat(4, minmax(300px, 1fr));
@@ -159,7 +159,7 @@
 }
 
 /* Responsive tablets */
-@media screen and (min-width:767px) and (max-width: 1050px) {
+@media screen and (min-width: 767px) and (max-width: 1050px) {
   .inicio__secciones {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }

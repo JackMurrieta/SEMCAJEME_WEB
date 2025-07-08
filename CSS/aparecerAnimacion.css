@@ -1,0 +1,21 @@
+/* Contenedor de secciones en grid */
+.contenido-inicio {
+  container-name: inicio-contenido;
+  animation: aparecer 2.4s 0s both;
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#noticias {
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 40%;
+}
