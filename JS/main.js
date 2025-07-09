@@ -19,10 +19,10 @@ function mostrarInfoContenedor(elemento, id) {
 
   if (detalleAnterior !== null) {
     if (detalleAnterior.id === id) {
-      detalleAnterior.remove(); // Cierra si ya está abierto el mismo
+      cerrarContenedorDetalle();
       return;
     } else {
-      detalleAnterior.remove(); // Cierra el anterior si es otro
+      detalleAnterior.remove();
     }
   }
 
@@ -89,7 +89,10 @@ function mostrarInfoContenedor(elemento, id) {
 
 function cerrarContenedorDetalle() {
   const detalleAnterior = document.querySelector(".detalle-seccion");
-  if (detalleAnterior) {
-    detalleAnterior.remove();
+  if (detalleAnterior && !detalleAnterior.classList.contains("salida")) {
+    detalleAnterior.classList.add("salida");
+    setTimeout(() => {
+      detalleAnterior.remove();
+    }, 400);
   }
 }

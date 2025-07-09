@@ -1,0 +1,30 @@
+.contenedor__seccion-semInforma {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-evenly;
+  min-height: clamp(300px, 60dvh, 600px);
+}
+
+.contenedor__video-semInforma {
+  aspect-ratio: 9 / 16;
+  height: clamp(300px, 60dvh, 600px);
+  width: auto;
+  max-width: 100%;
+}
+
+.video__semInforma {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.contenedor__texto {
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 600px;
+}

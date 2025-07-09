@@ -1,9 +1,10 @@
 /* Contenedor general */
 #noticias {
-  margin: 1em;
+  margin: clamp(1rem, 2dvh, 2rem);
   text-align: center;
-  height: 100%;
+  height: auto;
   position: relative;
+  padding-inline: clamp(1rem, 2vw, 3rem);
 }
 /* Contenedor del carrusel */
 .contenedor__carrusel {
@@ -16,6 +17,7 @@
 /* Track que contiene todos los slides */
 .carrusel-track {
   display: flex;
+  flex-wrap: nowrap;
   transition: transform 0.5s ease-in-out;
   justify-content: space-around;
   gap: 0.5rem;
@@ -27,6 +29,7 @@
 .carrusel-slide {
   min-width: 100%;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 3rem;
   height: fit-content;
@@ -38,7 +41,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
   border-radius: 0.5em;
   overflow: hidden;
-  max-width: 50%; /*porcentaje del contenedor padre */
+  flex: 1 1 clamp(200px, 40vw, 400px);
+  max-width: clamp(220px, 45%, 400px);
   text-align: center;
   transition: transform 0.3s;
 }
@@ -48,13 +52,17 @@
 }
 
 .carta img {
-  width: 50%; /*porcentaje del contenedor de la caja carta*/
+  width: 80%;
+  max-width: 300px;
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-top: clamp(0.5rem, 2dvh, 1rem);
 }
 
 .carta-titulo {
   padding: 0.5em;
-  font-size: 1em;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
 }
 
 .carta-titulo a {
@@ -66,85 +74,68 @@
   text-decoration: underline;
 }
 
-/* Botones de navegación */
+/* ===== BOTONES DE NAVEGACIÓN ===== */
 .carousel-btn {
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
-  font-size: 2em;
+  font-size: clamp(1.5rem, 3dvw, 2.5rem);
   background-color: rgba(0, 0, 0, 0.265);
   color: #113b8a;
   border: none;
   padding: 0.3em 0.6em;
   cursor: pointer;
   z-index: 5;
-  border-radius: 55%;
+  border-radius: 50%;
   user-select: none;
 }
 
 .carousel-btn.prev {
-  left: clamp(1em, 3vw, 3em);
+  left: clamp(1rem, 2vw, 2.5rem);
 }
 
 .carousel-btn.next {
-  right: clamp(1em, 3vw, 3em);
+  right: clamp(1rem, 2vw, 2.5rem);
 }
 
-/* Smartphones pequeños (<=480px) */
-@media (max-width: 650px) {
+/* ===== RESPONSIVE PARA MÓVILES PEQUEÑOS ===== */
+@media (max-width: 600px) {
   .carrusel-slide {
     flex-direction: column;
     align-items: center;
   }
 
-  .carta {
-    max-width: 55%;
-  }
-
-  .carta img {
-    width: 80%;
-  }
-
   .carousel-btn {
-    font-size: 1.5em;
-  }
-}
-
-/* Tablets en vertical (601px a 768px) */
-@media (min-width: 650px) and (max-width: 768px) {
-  .carrusel-slide {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    font-size: clamp(1rem, 5vw, 1.8rem);
+    top: auto;
+    bottom: 1rem;
   }
 
   .carta {
-    max-width: 50%;
-  }
-
-  .carta img {
-    width: 60%;
-  }
-}
-
-/* Tablets en horizontal (769px a 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .carta {
-    max-width: 40%;
-  }
-
-  .carta img {
-    width: 55%;
-  }
-}
-
-/* Laptops (>1024px) */
-@media (min-width: 1025px) {
-  .carta {
-    max-width: 50%;
-  }
-
-  .carta img {
     width: 50%;
+    max-width: 100%;
+    padding: clamp(0.5rem, 2vw, 1rem); /* Espaciado interno responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .carta img {
+    width: clamp(30%, 50%, 70%);
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .carta-titulo {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    padding-top: 0.5rem;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  .carta-titulo a {
+    font-size: inherit;
   }
 }

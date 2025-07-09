@@ -20,10 +20,10 @@
       href="../IMG/logoSemCajeme_default.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../CSS/aparecerAnimacion.css">
+    <link rel="stylesheet" href="../CSS/semInforma.css" />
+    <link rel="stylesheet" href="../CSS/aparecerAnimacion.css" />
     <link rel="stylesheet" href="../CSS/index.css" />
     <link rel="stylesheet" href="../CSS/noticias.css" />
-    <link rel="stylesheet" href="../CSS/contenedores_seccion.css" />
     <link rel="stylesheet" href="../CSS/navbar.css" />
     <link rel="stylesheet" href="../CSS/seccionesInicio.css" />
     <link rel="stylesheet" href=../CSS/video.css>
@@ -153,17 +153,53 @@
         </div>
       </section>
 
+      <!--SEM INFORMA-->
+      <section id="semInforma">
+        <div class="contenedor__seccion contenedor__seccion-semInforma">
+          <!--contenedor video semInforma-->
+          <div class="contenedor__video-semInforma">
+            <video
+              class="video__semInforma"
+              src="../VIDEOS/semInforma.mp4"
+              loop
+              playsinline
+              controls
+            ></video>
+          </div>
+          <!--Texto informativo video-->
+          <div class="contenedor__texto">
+            <h2>SEM INFORMA</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              similique nemo obcaecati ipsam laboriosam sint, atque voluptatum?
+              Animi culpa magni aut quibusdam sit quidem dolores iste odit.
+              Quas, eligendi earum! Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Ea aperiam animi tempore labore. Ducimus natus
+              nam vitae necessitatibus explicabo, nostrum illo dolores qui
+              facere. Id, repellendus exercitationem! Soluta, cupiditate
+              facilis.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!--SEM NOTICIAS-->
-      <section id="noticias">
-        <!-- Botones -->
-        <button onclick="mostrarSiguiente()" class="carousel-btn prev">
-          &#10094;
-        </button>
-        <button onclick="mostrarAnterior()" class="carousel-btn next">
-          &#10095;
-        </button>
-        <div class="contenedor__seccion contenedor__carrusel">
+      <section
+        id="noticias"
+        class="contenedor__seccion contenedor__seccion--noticias"
+      >
+        <div class="contenedor__seccion contenedor__titulo">
           <h2 class="titulo__seccion">NOTICIAS</h2>
+        </div>
+        <div class="contenedor__seccion contenedor__carrusel">
+          <!-- Botones -->
+          <button onclick="mostrarSiguiente()" class="carousel-btn prev">
+            &#10094;
+          </button>
+          <button onclick="mostrarAnterior()" class="carousel-btn next">
+            &#10095;
+          </button>
+
           <div class="carrusel-track">
             <!-- Slide 1 -->
             <div class="carrusel-slide">
