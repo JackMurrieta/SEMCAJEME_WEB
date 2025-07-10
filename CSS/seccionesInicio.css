@@ -1,7 +1,7 @@
 .inicio__secciones {
   display: grid;
   grid-template-columns: repeat(4, minmax(clamp(180px, 22dvw, 300px), 1fr));
-  grid-auto-rows: 1fr;
+  grid-auto-rows: clamp(150px, 25dvh, 250px);
   gap: clamp(0.3em, 1dvw, 1em);
   width: 100%;
   margin: 0.5em 0;
@@ -20,7 +20,7 @@
   padding: clamp(0.5rem, 2dvw, 1rem);
   z-index: 0;
   border-radius: 0.5rem;
-  min-height: clamp(150px, 25dvh, 250px);
+  height: 100%;
 }
 
 /* Fondo con imagen */
@@ -53,7 +53,7 @@
   z-index: 3;
   margin: auto;
   padding: clamp(1.5rem, 5dvh, 3rem) 1rem;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 2dvw, 1.5rem);
   text-align: center;
   cursor: pointer;
   color: #fff;
@@ -65,6 +65,7 @@
   font-weight: 650;
   display: flex;
   justify-content: center;
+  align-items: center; /* mejora centrado vertical */
 }
 
 .seccion__titulo:hover {
@@ -93,14 +94,15 @@
 .detalle-seccion {
   grid-column: 1 / -1;
   background: linear-gradient(transparent, #81a1eb9f, #0d3072a4);
-  padding: clamp(0.5em, 2dvw, 1em);
   border-radius: 0.5rem;
   margin: 0.4em 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
-  min-height: clamp(150px, 20dvh, 250px);
+  /**/
+  height: clamp(150px, 25dvh, 250px);
   max-height: 0;
   opacity: 0;
   animation: desplegar 1s ease forwards;
@@ -140,10 +142,40 @@
 }
 
 .detalle__contenido {
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: #1b2a4f;
   text-align: center;
-  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-size: clamp(0.5rem, 1.2vw, 1rem);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.detalle__contenido h3 {
+  margin: 0;
+  margin-top: 1rem;
+  font-size: clamp(1.5rem, 1.5dvw, 1.125rem);
+  font-weight: 700;
+  color: #0f1b35; /* tono más fuerte para el encabezado */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.detalle__contenido p {
+  margin: 0;
+  box-sizing: border-box;
+  color: #1b2a4f;
+  font-weight: 500;
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  text-align: justify;
+  padding: 0 clamp(1.3rem, 4vw, 3rem) clamp(1rem, 5dvh, 2.5rem);
+
 }
 
 /* Botón cerrar */

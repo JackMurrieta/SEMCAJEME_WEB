@@ -34,36 +34,60 @@ function mostrarInfoContenedor(elemento, id) {
   let contenido = "";
   switch (id) {
     case "historia":
-      contenido =
-        "<h3>Historia</h3><p>Esta sección cuenta los orígenes y evolución de nuestra organización.</p>";
+      contenido = `
+        <h3>Historia</h3>
+        <p>
+          La Sociedad Estudiantil de Medicina (SEM) nació con el propósito de representar,
+          apoyar y fomentar el desarrollo integral de los estudiantes de medicina.
+          Desde su creación, ha sido un espacio de liderazgo, compañerismo y trabajo en equipo,
+          impulsando actividades académicas, científicas y sociales que enriquecen la formación médica.
+          <a href="historia.html" class="saber-mas">Saber más</a>
+        </p>
+      `;
       break;
     case "congresos":
-      contenido =
-        "<h3>Congresos</h3><p>Aquí puedes ver información sobre nuestros congresos pasados y futuros.</p>";
+      contenido = `
+          <h3>Congresos</h3>
+          <p>
+        CORMED es un congreso académico organizado por estudiantes de medicina que reúne a ponentes de distintas partes de México para abordar temas médicos de actualidad. Es un espacio de actualización, aprendizaje y diálogo entre profesionales de la salud y estudiantes, promoviendo el desarrollo académico y clínico en la región.
+            <a href="historia.html" class="saber-mas">Saber más</a>
+          </p>
+        `;
       break;
+
     case "mesaDirec":
-      contenido =
-        "<h3>Mesa Directiva</h3><p>Conoce a los miembros actuales de la mesa directiva.</p>";
+      contenido = `
+        <h3>Mesa Directiva</h3>
+        <p>
+          Conoce a los miembros actuales de la mesa directiva.
+          <a href="historia.html" class="saber-mas">Saber más</a>
+        </p>
+      `;
       break;
     case "contactos":
-      contenido =
-        "<h3>Contactos</h3><p>Información de contacto y medios de comunicación oficiales.</p>";
+      contenido = `
+        <h3>Contactos</h3>
+        <p>
+          En la SEM estamos abiertos a colaborar con marcas, instituciones y empresas comprometidas con la educación, la salud y el desarrollo estudiantil.
+          <a href="historia.html" class="saber-mas">Saber más</a>
+        </p>
+      `;
       break;
   }
 
   detalle.innerHTML = `
-  <div class="contenedor-boton">
-    <button
-      onclick="cerrarContenedorDetalle()"
-      aria-label="cerrar detalle"
-      class="boton-cerrar"
-    >
-      &times;
-    </button>
-  </div>
-  <div class="detalle__contenido">
-    ${contenido}
-  </div>`;
+    <div class="contenedor-boton">
+        <button
+          onclick="cerrarContenedorDetalle()"
+          aria-label="cerrar detalle"
+          class="boton-cerrar"
+        >
+          &times;
+        </button>
+      </div>
+      <div class="detalle__contenido">
+        ${contenido}
+    </div>`;
 
   const grid = document.querySelector(".inicio__secciones");
   const isMobile = window.innerWidth <= 954; /*RESPONSIVE PIXELES*/
