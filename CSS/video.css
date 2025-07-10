@@ -13,6 +13,7 @@
   aspect-ratio: 16/9;
   height: 35em;
   margin: auto;
+  margin-bottom:  clamp(0.3em, 1dvw, 1em);
 }
 
 .inicio__video {

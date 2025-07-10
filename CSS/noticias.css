@@ -1,10 +1,8 @@
 /* Contenedor general */
 #noticias {
-  margin: clamp(1rem, 2dvh, 2rem);
   text-align: center;
   height: auto;
   position: relative;
-  padding-inline: clamp(1rem, 2vw, 3rem);
 }
 /* Contenedor del carrusel */
 .contenedor__carrusel {
@@ -12,6 +10,7 @@
   max-width: 1000px;
   margin: auto;
   height: auto;
+  margin-bottom: clamp(4rem, 7dvh, 7rem); /* espaciado uniforme hacia abajo */
 }
 
 /* Track que contiene todos los slides */
@@ -98,6 +97,11 @@
   right: clamp(1rem, 2vw, 2.5rem);
 }
 
+.contenedor__titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ===== RESPONSIVE PARA MÓVILES PEQUEÑOS ===== */
 @media (max-width: 600px) {
   .carrusel-slide {

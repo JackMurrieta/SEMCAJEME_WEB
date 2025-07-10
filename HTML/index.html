@@ -20,6 +20,7 @@
       href="../IMG/logoSemCajeme_default.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="../CSS/scrollBar.css"/>
     <link rel="stylesheet" href="../CSS/semInforma.css" />
     <link rel="stylesheet" href="../CSS/aparecerAnimacion.css" />
     <link rel="stylesheet" href="../CSS/index.css" />
@@ -157,18 +158,20 @@
       <section id="semInforma">
         <div class="contenedor__seccion contenedor__seccion-semInforma">
           <!--contenedor video semInforma-->
-          <div class="contenedor__video-semInforma">
-            <video
-              class="video__semInforma"
-              src="../VIDEOS/semInforma.mp4"
-              loop
-              playsinline
-              controls
-            ></video>
+          <div class="contenedor__video-wrapper">
+            <div class="contenedor__video-semInforma">
+              <video
+                class="video__semInforma"
+                src="../VIDEOS/semInforma.mp4"
+                loop
+                playsinline
+                controls
+              ></video>
+            </div>
           </div>
           <!--Texto informativo video-->
           <div class="contenedor__texto">
-            <h2>SEM INFORMA</h2>
+            <h2 class="titulo__seccion">SEM INFORMA</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
               similique nemo obcaecati ipsam laboriosam sint, atque voluptatum?

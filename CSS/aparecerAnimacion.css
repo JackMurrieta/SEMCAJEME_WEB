@@ -14,6 +14,18 @@
   }
 }
 
+.contenedor__seccion-semInforma {
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 40%;
+}
+
+.contenedor__texto {
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 40%;
+}
+
 #noticias {
   animation: aparecer both;
   animation-timeline: view();

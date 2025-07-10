@@ -1,6 +1,6 @@
 .contenedor__seccion-semInforma {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 1rem;
@@ -10,9 +10,24 @@
 
 .contenedor__video-semInforma {
   aspect-ratio: 9 / 16;
-  height: clamp(300px, 60dvh, 600px);
-  width: auto;
+  max-height: clamp(800px, 70dvh, 900px); /* o lo que necesites */
+  width: clamp(250px, 30vw, 400px);
   max-width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* WRAPPER: centra y limita el ancho del video */
+.contenedor__video-wrapper {
+  min-width: clamp(250px, 25vw, 400px);
+  justify-content: center;
+  align-items: center;
+  max-height: clamp(800px, 70dvh, 900px); /* o lo que necesites */
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+  border-radius: 0.5rem;
 }
 
 .video__semInforma {
@@ -27,4 +42,5 @@
   flex: 1 1 300px;
   min-width: 250px;
   max-width: 600px;
+  align-self: center;
 }

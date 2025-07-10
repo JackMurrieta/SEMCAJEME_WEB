@@ -40,21 +40,20 @@ body {
   min-height: 100vh;
 }
 
+/* MAIN: solo controla espaciado horizontal */
 main {
   width: 100%;
   max-width: 1800px;
-  margin: 0 auto; /* centra horizontalmente */
-  padding: 0 1rem;
+  margin-inline: auto; /* centra el main horizontalmente */
+  padding-inline: clamp(1rem, 3dvw, 2rem); /* padding adaptable a los lados */
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(1.5rem, 5dvh, 3rem); /* espaciado uniforme hacia abajo */
 }
 
 .contenedor__seccion {
   width: 100%;
   margin: 0 auto; /* centra horizontalmente */
-  padding: 0 1rem;
   display: flex;
   box-sizing: border-box;
 }
