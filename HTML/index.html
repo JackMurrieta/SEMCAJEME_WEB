@@ -63,7 +63,7 @@
 
       <!--Logo SEMCAJEME-->
       <div class="nav__logo-contenedor">
-        <a href="index.html">
+        <a href="index.html" aria-label="ir al inicio de SEM Cajeme">
           <img
             src="../IMG/logoSemCajeme.png"
             alt="logo sociedad de alumnos de medicina Cajeme"
@@ -108,6 +108,7 @@
               muted
               loop
               playsinline
+              aria-label="Video informativo relacionado en el mundo de la medicina realizado por SEM Cajeme"
             ></video>
           </div>
           <!--contenedor principal de secciones -->
@@ -201,10 +202,10 @@
         </div>
         <div class="contenedor__seccion contenedor__carrusel">
           <!-- Botones -->
-          <button onclick="mostrarSiguiente()" class="carousel-btn prev">
+          <button onclick="mostrarSiguiente()" class="carousel-btn prev" aria-label="ver noticia anterior">
             &#10094;
           </button>
-          <button onclick="mostrarAnterior()" class="carousel-btn next">
+          <button onclick="mostrarAnterior()" class="carousel-btn next" aria-label="ver noticia siguiente">
             &#10095;
           </button>
 
@@ -212,11 +213,11 @@
             <!-- Slide 1 -->
             <div class="carrusel-slide">
               <div class="carta">
-                <img src="../IMG/logoSemCajeme.png" alt="Descripción 1" />
+                <img src="../IMG/logoSemCajeme.png" alt="Noticia 1 sobre SEM Cajeme" loading="lazy" />
                 <h3 class="carta-titulo">Subtitulo contenido</h3>
               </div>
               <div class="carta">
-                <img src="../IMG/logoSemCajeme.png" alt="Descripción 2" />
+                <img src="../IMG/logoSemCajeme.png" alt="Descripción 2" loading="lazy" />
                 <h3 class="carta-titulo">Subtitulo contenido</h3>
               </div>
               <!-- puedes agregar más tarjetas por slide -->
@@ -225,11 +226,11 @@
             <!-- Slide 2 -->
             <div class="carrusel-slide">
               <div class="carta">
-                <img src="../IMG/logoSemCajeme.png" alt="Descripción 3" />
+                <img src="../IMG/logoSemCajeme.png" alt="Descripción 3" loading="lazy" />
                 <h3 class="carta-titulo">Subtitulo contenido</h3>
               </div>
               <div class="carta">
-                <img src="../IMG/logoSemCajeme.png" alt="Descripción 4" />
+                <img src="../IMG/logoSemCajeme.png" alt="Descripción 4" loading="lazy"/>
                 <h3 class="carta-titulo">Subtitulo contenido</h3>
               </div>
             </div>
@@ -254,7 +255,12 @@
           <!--Lista de enlace de diferentes o conoce mas -->
           <ul class="lista__info-campus">
             <li class="lista__item__info-campus">
-              <a href="https://campushermosillo.unison.mx/campus-cajeme/">
+              <a
+                href="https://campushermosillo.unison.mx/campus-cajeme/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir el sitio del campus Cajeme de UNISON en una nueva pestaña"
+              >
                 CONOCE MÁS
               </a>
             </li>
