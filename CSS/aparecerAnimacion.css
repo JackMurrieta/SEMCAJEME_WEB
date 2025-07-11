@@ -31,3 +31,9 @@
   animation-timeline: view();
   animation-range: cover 10% cover 40%;
 }
+
+.contenedor__seccion--campus {
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 40%;
+}
