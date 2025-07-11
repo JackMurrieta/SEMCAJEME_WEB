@@ -102,7 +102,7 @@
   align-items: center;
   position: relative;
   /**/
-  height: auto;
+  height: max-content;
   max-height: 0;
   opacity: 0;
   animation: desplegar 1s ease forwards;
@@ -153,16 +153,16 @@
   font-size: clamp(0.5rem, 1.2vw, 1rem);
   line-height: 1.6;
   box-sizing: border-box;
+  margin-top: .5rem;
 }
 
 .detalle__contenido h3 {
-  margin: 0;
-  margin-top: 1rem;
+  margin: 0 auto;
   font-size: clamp(1.5rem, 1.5dvw, 1.125rem);
   font-weight: 700;
   color: #0f1b35; /* tono más fuerte para el encabezado */
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.218);
+  
 }
 
 .detalle__contenido p {
