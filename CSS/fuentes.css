@@ -4,15 +4,14 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-
 }
 
-.titulo__seccion{
-  color: #00060d;
+.titulo__seccion {
+  color: #0f1b35;
   text-align: center;
-  margin-bottom: 1.5em;
-  text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.432);
-
+  font-size: clamp(1.125rem, 2.5dvw, 2.125rem);
+  margin-bottom: clamp(1rem,1.5dvh,1.125rem);
+  text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.335);
 }
 
 .titulo-principal {
@@ -25,12 +24,13 @@
   display: none;
 }
 
-p{
+.semInforma__texto {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   color: #1b2a4f;
-  font-weight: 600;
-  font-size: clamp(.5rem, 1.2vw, 1rem);
-
+  font-weight: 500;
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  text-align: justify;
 }
