@@ -75,19 +75,19 @@
 
 /* Imágenes de fondo por sección */
 .contenedor_fondo--historia {
-  background-image: url("../IMG/SECCIONES_PORTADAS/portadaHistoria.jpg");
+  background-image: url("../../IMG/SECCIONES_PORTADAS/portadaHistoria.jpg");
 }
 
 .contenedor_fondo--congresos {
-  background-image: url("../IMG/SECCIONES_PORTADAS/portadaCongreso.jpg");
+  background-image: url("../../IMG/SECCIONES_PORTADAS/portadaCongreso.jpg");
 }
 
 .contenedor_fondo--mesadirec {
-  background-image: url("../IMG/SECCIONES_PORTADAS/portadaMesaDirectiva.jpg");
+  background-image: url("../../IMG/SECCIONES_PORTADAS/portadaMesaDirectiva.jpg");
 }
 
 .contenedor_fondo--contactos {
-  background-image: url("../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
+  background-image: url("../../IMG/SECCIONES_PORTADAS/portadaContactos.jpg");
 }
 
 /* Contenedor desplegable */

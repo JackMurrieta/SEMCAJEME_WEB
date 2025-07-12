@@ -10,7 +10,7 @@
   color: #1b2a4f;
   text-align: center;
   font-size: clamp(1.125rem, 2.5dvw, 2.125rem);
-  margin-bottom: clamp(1rem,1.5dvh,1.125rem);
+  margin-bottom: clamp(1rem, 1.5dvh, 1.125rem);
   text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.335);
 }
 
@@ -28,9 +28,22 @@
   margin: 0;
   box-sizing: border-box;
   color: #1b2a4f;
-  font-weight: 500;
+  font-weight: 550;
   font-size: clamp(1rem, 1.3vw, 1.125rem);
   line-height: 1.75;
   letter-spacing: 0.2px;
   text-align: justify;
+}
+
+@media screen and (max-width: 800px) {
+  .semInforma__texto {
+    font-size: clamp(1.5rem, 2dvw, 2rem);
+  }
+  .titulo__seccion {
+    font-size: clamp(2rem, 4dvw, 5rem);
+  }
+  /*Titulo seccion de inicio*/
+  .seccion__titulo {
+    font-size: clamp(1.5rem, 2dvw, 3rem);
+  }
 }

@@ -44,3 +44,23 @@
   max-width: 600px;
   align-self: center;
 }
+
+.contenedor__texto h2{
+  font-size: clamp(1.5rem, 1.5dvw, 2rem);
+}
+
+
+@media screen and (max-width:800px){
+  .contenedor__seccion-semInforma {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .contenedor__texto{
+    padding:0 5dvw;
+  }
+  .contenedor__texto h2{
+    font-size: clamp(2rem, 4dvw,5rem);
+  }
+}
