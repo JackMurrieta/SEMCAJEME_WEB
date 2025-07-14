@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../CSS/navBar.css" />
     <link rel="stylesheet" href="../CSS/footer.css" />
     <!--Tipografia-->
+    <link rel="stylesheet" href="../CSS/fuentes-default.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +40,7 @@
     <title>Histria | SEM Cajeme</title>
   </head>
   <body class="raleway-default">
-    <header class="header">
+    <header class="header raleway-default">
       <!--Boton de menu despegable -->
       <button
         class="nav__toggle"
@@ -102,26 +103,24 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="contenedor__footer">
+        <!-- Secciones -->
         <div class="footer__box">
           <div class="contenedor__titulo">
             <h3 class="footer__titulo">Secciones</h3>
           </div>
           <ul class="footer__list">
+            <li><a class="footer__link" href="comunidad.html">Comunidad</a></li>
+            <li><a class="footer__link" href="eduacion.html">Educación</a></li>
+            <li><a class="footer__link" href="comites.html">Comités</a></li>
             <li>
-              <a class="footer__link" href="#">Comunidad</a>
-            </li>
-            <li>
-              <a class="footer__link" href="#">Educación</a>
-            </li>
-            <li>
-              <a class="footer__link" href="#">Comités</a>
-            </li>
-            <li>
-              <a class="footer__link" href="#">Consultorio Bienestar</a>
+              <a class="footer__link" href="consultBienestar.html"
+                >Consultorio Bienestar</a
+              >
             </li>
           </ul>
         </div>
 
+        <!-- Información -->
         <div class="footer__box">
           <div class="contenedor__titulo">
             <h3 class="footer__titulo">Información</h3>
@@ -137,6 +136,7 @@
           </ul>
         </div>
 
+        <!-- Redes sociales -->
         <div class="footer__box">
           <div class="contenedor__titulo">
             <h3 class="footer__titulo">Redes sociales</h3>
@@ -149,8 +149,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook de SEM Cajeme"
-                ><i class="bi bi-facebook"></i> Facebook</a
               >
+                <i class="bi bi-facebook" aria-hidden="true"></i> Facebook
+              </a>
             </li>
             <li>
               <a
@@ -160,9 +161,8 @@
                 rel="noopener noreferrer"
                 aria-label="Instagram de SEM Cajeme"
               >
-                <i class="bi bi-instagram" aria-hidden="true"></i>
-                Instagram</a
-              >
+                <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+              </a>
             </li>
             <li>
               <a
@@ -170,33 +170,38 @@
                 href="https://www.tiktok.com/@sem.cajeme"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visitar TikTok de SEM Cajeme"
+                aria-label="TikTok de SEM Cajeme"
               >
-                <i class="bi bi-tiktok" aria-hidden="true"></i>
-                TikTok</a
-              >
+                <i class="bi bi-tiktok" aria-hidden="true"></i> TikTok
+              </a>
             </li>
             <li>
-              <a class="footer__link" href="mailto:semunisoncajeme@gmail.com"
-                ><i class="bi bi-envelope"></i> Gmail</a
+              <a
+                class="footer__link"
+                href="mailto:semunisoncajeme@gmail.com"
+                aria-label="Enviar correo a SEM Cajeme"
               >
+                <i class="bi bi-envelope" aria-hidden="true"></i> Gmail
+              </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <!--Logotipos-->
+      <!-- Logos -->
       <div class="footer__box footer__box--logo">
         <img
           class="logo__footer"
           src="../IMG/logo_footer.png"
-          alt="Logo SEM CAJEME y Logo UNISON"
+          alt="Logotipos de SEM Cajeme y Universidad de Sonora"
+          loading="lazy"
         />
       </div>
 
+      <!-- Copyright -->
       <div class="footer__copyright">
         <p>
-          &copy; 2025 <strong>SEM CAJEME</strong> - Sociedad Estudiantil de
+          &copy; 2025 <strong>SEM CAJEME</strong> – Sociedad Estudiantil de
           Medicina UNISON Cajeme.
         </p>
       </div>
