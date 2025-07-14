@@ -22,8 +22,12 @@
     />
     <link rel="stylesheet" href="../CSS/navBar.css" />
     <link rel="stylesheet" href="../CSS/footer.css" />
+    <link
+      rel="stylesheet"
+      href="../CSS/historia-css/historia-presentacion.css"
+    />
     <!--Tipografia-->
-    <link rel="stylesheet" href="../CSS/fuentes-default.css"/>
+    <link rel="stylesheet" href="../CSS/fuentes-default.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -85,17 +89,47 @@
       </nav>
     </header>
     <main>
-      <section class="historia__video">
-        <!-- Video 16:9 aquí -->
-      </section>
+      <section class="historia__presentacion">
+        <div class="presentacion__video">
+          <iframe
+            src="https://www.youtube.com/embed/Nl7ghecyy1U?si=GHOYUk0C__MUWvib"
+            title="Video presentación de SEM Cajeme"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
 
-      <section class="historia__contenido">
-        <article>
-          <!-- Texto e imágenes de la historia -->
-        </article>
-
-        <aside>
-          <!-- Línea de tiempo / datos curiosos / enlaces a eventos -->
+        <aside
+          class="presentacion__aside"
+          aria-label="Presidentes anteriores de SEM Cajeme"
+        >
+          <h3 class="aside__titulo">Trayectoria Presidenciales</h3>
+          <ul class="aside__lista">
+            <li>
+              <img
+                src="../IMG/presidentes/presidente_2021.jpg"
+                alt="Presidente 2021 - Juan Pérez"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="../IMG/presidentes/presidente_2022.jpg"
+                alt="Presidente 2022 - María Gómez"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="../IMG/presidentes/presidente_2023.jpg"
+                alt="Presidente 2023 - Luis Hernández"
+                loading="lazy"
+              />
+            </li>
+          </ul>
         </aside>
       </section>
     </main>
