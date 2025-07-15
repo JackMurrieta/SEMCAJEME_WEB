@@ -3,7 +3,7 @@
   position: sticky;
   height: fit-content;
   top: 0;
-  background: linear-gradient(to bottom, #1c1c1c93, #2f2f2f60, transparent);
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +11,8 @@
   container-name: header;
   padding: 0.2rem 1rem;
   z-index: 100;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.515);
 }
 
 .nav__logo-contenedor {
@@ -115,6 +117,10 @@
     border-radius: 6px;
     transition: all 0.3s ease;
   }
+
+  .link__item {
+  color: #113b8a;
+}
 
   .nav__toggle {
     display: none;

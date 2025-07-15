@@ -30,7 +30,7 @@
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 1rem;
   border-radius: 0.75rem;
   background-color: #f9f9f9;
@@ -72,7 +72,7 @@
   align-items: center;
   border: 2px solid #1b2a4f;
   border-radius: 0.75rem;
-  background-color: #f5f5f5;
+  background: linear-gradient(#d0e5ff, #113b8a);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   width: 290.26px;
   height: 380.05px;
