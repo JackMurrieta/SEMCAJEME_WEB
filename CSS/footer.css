@@ -23,6 +23,7 @@
   min-height: auto;
   justify-content: center;
   align-items: stretch;
+  gap: 1rem;
 }
 
 .contenedor__titulo {
