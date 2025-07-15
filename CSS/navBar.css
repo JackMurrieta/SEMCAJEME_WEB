@@ -13,10 +13,13 @@
   z-index: 100;
   border-bottom: 1px solid #ccc;
   box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.515);
+  margin-bottom: 1.5rem;
 }
 
 .nav__logo-contenedor {
-  max-width: clamp(3em, 5vw, 4em);
+  max-width: clamp(5rem, 15dvw, 12rem); /*Tamaño logo*/
+  display: flex;
+  align-items:center;
 }
 
 .nav__logo {
@@ -26,7 +29,7 @@
 }
 
 .nav__toggle {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 10vw, 4.3rem); /*Tamaño Toogle Menu*/
   font-weight: 550;
   background: none;
   border: none;
@@ -119,8 +122,8 @@
   }
 
   .link__item {
-  color: #113b8a;
-}
+    color: #113b8a;
+  }
 
   .nav__toggle {
     display: none;

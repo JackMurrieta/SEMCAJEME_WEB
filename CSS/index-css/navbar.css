@@ -14,7 +14,9 @@
 }
 
 .nav__logo-contenedor {
-  max-width: clamp(3em, 5vw, 4em);
+  max-width: clamp(5rem, 15dvw, 12rem); /*Tamaño logo*/
+  display: flex;
+  align-items: center;
 }
 
 .nav__logo {
@@ -24,7 +26,7 @@
 }
 
 .nav__toggle {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 10vw, 4.3rem); /*Tamaño Toogle Menu*/
   font-weight: 550;
   background: none;
   border: none;
