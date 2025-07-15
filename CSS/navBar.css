@@ -19,7 +19,7 @@
 .nav__logo-contenedor {
   max-width: clamp(5rem, 15dvw, 12rem); /*Tamaño logo*/
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 .nav__logo {
