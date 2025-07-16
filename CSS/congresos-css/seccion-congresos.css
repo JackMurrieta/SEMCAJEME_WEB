@@ -7,20 +7,16 @@
   align-items: center;
   padding-block: clamp(1rem, 4dvh, 3rem); /* Espaciado vertical adaptable */
   box-sizing: border-box;
-  background: linear-gradient(to bottom,#fff,#000,transparent);
 }
 
 /* Capa de desenfoque */
+/* Fondo base desenfocado */
 .fondo-blur {
   position: absolute;
-  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
-  background: linear-gradient(to bottom, #ffffff88, #00000088);
-  backdrop-filter: blur(10px);
+  inset: 0;
+  background: linear-gradient(to bottom, #ffffff88, #00000099);
+  backdrop-filter: blur(40px);
   z-index: 0;
-}
-/*Fondos con blur en hover*/
-.fondo-blur:has(.congreso-1:hover){
-    background-image: url(../../IMG/congresos/CONGRESOS PORTADA/);
 }
 
 .contenedor__congresos {
@@ -44,14 +40,15 @@
 }
 
 .item__congreso {
-  position: relative;
   display: block;
-  width: 160px; /*tamaño del item de la imagen al no hacer hover*/
-  float: left;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 160px;
   transition: steps(50) 0.5s;
-  /**/
-  flex: 1;
   cursor: pointer;
+  float: left;
+  filter: brightness(80%);
 }
 
 .contenedor__congresos ul:hover li {
@@ -65,8 +62,12 @@
 }
 
 .img__congreso {
-  display: flex;
   display: block;
   object-fit: cover;
   height: 100%;
+  object-position: center;
+}
+
+.img__congreso-10 {
+  object-fit: contain;
 }
