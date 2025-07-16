@@ -40,7 +40,7 @@ function mostrarInfoContenedor(elemento, id) {
         <h3>Congresos</h3>
         <p>
           CORMED es un congreso académico organizado por estudiantes de medicina que reúne a ponentes de distintas partes de México para abordar temas médicos de actualidad. Es un espacio de actualización, aprendizaje y diálogo entre profesionales de la salud y estudiantes, promoviendo el desarrollo académico y clínico en la región.
-          <a href="historia.html" class="saber-mas">Saber más</a>
+          <a href="congresos.html" class="saber-mas">Saber más</a>
         </p>`;
       break;
     case "mesaDirec":
