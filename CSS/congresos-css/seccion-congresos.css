@@ -48,7 +48,7 @@
   transition: steps(50) 0.5s;
   cursor: pointer;
   float: left;
-  filter: brightness(80%);
+
 }
 
 .contenedor__congresos ul:hover li {
@@ -61,13 +61,18 @@
   filter: brightness(100%);
 }
 
-.img__congreso {
-  display: block;
-  object-fit: cover;
-  height: 100%;
-  object-position: center;
+.contenedor__img {
+  display: flex;
+  position: relative;
+  width: 100%;      /* Que ocupe todo el ancho disponible */
+  height: 100%;     /* Que se ajuste al alto del contenedor padre */
 }
 
-.img__congreso-10 {
-  object-fit: contain;
+.img__congreso {
+  display: block;
+  width: 100%;      /* Ocupar todo el ancho del contenedor */
+  height: 100%;     /* Ocupar todo el alto */
+  object-fit: cover;       /* Llenar el espacio, aunque recorte */
+  object-position: center; /* Centrada */
 }
+
