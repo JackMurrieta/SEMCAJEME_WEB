@@ -1,0 +1,46 @@
+/* Sección general */
+.seccion__galeria {
+  width: 100%;
+  min-height: clamp(70dvh, 90vh, 100dvh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  gap:5rem;
+}
+
+/* Contenedor por congreso */
+.galeria__congreso {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Imágenes */
+.galeria__congreso > img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.galeria__congreso > img:hover {
+  transform: scale(1.05);
+}
+
+/* Título */
+.contenedor__titulo__congreso {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.titulo_congreso {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+  color: #113b8a;
+  margin: 0;
+}

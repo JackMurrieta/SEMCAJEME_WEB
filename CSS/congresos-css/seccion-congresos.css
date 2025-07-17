@@ -1,6 +1,6 @@
 .seccion__congresos {
   width: 100%;
-  height: 70%;
+  height: auto;
   min-height: clamp(60dvh, 80vh, 100dvh); /* Altura legible y adaptable */
   display: flex;
   justify-content: center;
