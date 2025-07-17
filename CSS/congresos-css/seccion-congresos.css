@@ -7,6 +7,7 @@
   align-items: center;
   padding-block: clamp(1rem, 4dvh, 3rem); /* Espaciado vertical adaptable */
   box-sizing: border-box;
+  margin-bottom:5rem; /*USAR CLAMP*/
 }
 
 /* Capa de desenfoque */
@@ -14,7 +15,7 @@
 .fondo-blur {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #ffffff88, #00000099);
+  background: linear-gradient(to bottom, #ffffff88, #113b8a99);
   backdrop-filter: blur(40px);
   z-index: 0;
 }
@@ -45,7 +46,7 @@
   justify-content: center;
   position: relative;
   width: 160px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   float: left;
 }
