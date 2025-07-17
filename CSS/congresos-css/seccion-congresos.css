@@ -48,7 +48,6 @@
   transition: steps(50) 0.5s;
   cursor: pointer;
   float: left;
-
 }
 
 .contenedor__congresos ul:hover li {
@@ -63,16 +62,70 @@
 
 .contenedor__img {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   position: relative;
-  width: 100%;      /* Que ocupe todo el ancho disponible */
-  height: 100%;     /* Que se ajuste al alto del contenedor padre */
+  width: 100%; /* Que ocupe todo el ancho disponible */
+  height: 100%; /* Que se ajuste al alto del contenedor padre */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.img__congreso {
-  display: block;
-  width: 100%;      /* Ocupar todo el ancho del contenedor */
-  height: 100%;     /* Ocupar todo el alto */
-  object-fit: cover;       /* Llenar el espacio, aunque recorte */
-  object-position: center; /* Centrada */
+/*Imagenes de fondo*/
+.contenedor__img--congreso-1 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/1er-congreso.png);
 }
 
+.contenedor__img--congreso-3 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/3er-congreso.png);
+}
+.contenedor__img--congreso-4 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/4TOCONGRESO.png);
+}
+.contenedor__img--congreso-5 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/5TOCONGRESO.png);
+}
+.contenedor__img--congreso-6 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/6-congreso.jpg);
+}
+.contenedor__img--congreso-7 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/7-congreso.jpg);
+}
+.contenedor__img--congreso-8 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/8VOCONGRESO.png);
+}
+.contenedor__img--congreso-9 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/9-congreso.jpg);
+}
+.contenedor__img--congreso-10 {
+  background-image: url(../../IMG/congresos/CONGRESOS-PORTADA/10-congreso.jpg);
+}
+
+/* Botón base */
+.btn-ver-galeria {
+  padding: 1.3rem 5rem; /* espacio interno aumentado */
+  margin: 1rem; /* espacio externo */
+  background-color: #113b8a;
+  color: white;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-size: 1.2rem; /* tamaño de letra más grande */
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+
+.contenedor__img:hover .btn-ver-galeria {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.btn-ver-galeria:hover {
+  background-color: #2959b2;
+}
