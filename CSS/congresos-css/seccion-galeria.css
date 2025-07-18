@@ -1,13 +1,3 @@
-/* FONDO BLUR */
-.fondo-blur--galeria {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(#ffffff88, #113b8a99, #082c6f, #113);
-  backdrop-filter: blur(clamp(1rem, 6dvw, 4rem));
-  -webkit-backdrop-filter: blur(clamp(1rem, 6dvw, 4rem));
-  z-index: 0;
-}
-
 /* Z-Index base para galería y títulos */
 .galeria__congreso,
 .contenedor__titulo__congreso,
@@ -156,8 +146,8 @@ img {
   grid-template-areas:
     "img-principal img-principal img-principal img-principal img-principal"
     "img-principal img-principal img-principal img-principal img-principal"
-    "img3 img3 img4 img4 img2"
-    "img3 img3 img4 img4 img2";
+    "img3 img3 img4 img4 img4"
+    "img3 img3 img4 img4 img4";
 }
 
 .galeria__congreso--X img:nth-child(1) {
@@ -166,12 +156,10 @@ img {
 .galeria__congreso--X img:nth-child(2) {
   grid-area: img3;
 }
-.galeria__congreso--X img:nth-child(4) {
+.galeria__congreso--X img:nth-child(3) {
   grid-area: img4;
 }
-.galeria__congreso--X img:nth-child(3) {
-  grid-area: img2;
-}
+
 
 /*3IMG*/
 .galeria__congreso--fleximg {

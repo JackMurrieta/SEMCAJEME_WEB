@@ -1,0 +1,20 @@
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #2651be #fff;
+}
+main {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    overflow: visible;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Para navegadores WebKit (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

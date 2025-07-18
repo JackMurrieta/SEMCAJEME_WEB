@@ -7,10 +7,9 @@
   align-items: center;
   padding-block: clamp(1rem, 4dvh, 3rem); /* Espaciado vertical adaptable */
   box-sizing: border-box;
-  margin-bottom:5rem; /*USAR CLAMP*/
+  margin-bottom: 5rem; /*USAR CLAMP*/
 }
 
-/* Capa de desenfoque */
 /* Fondo base desenfocado */
 .fondo-blur {
   position: absolute;
@@ -118,8 +117,8 @@
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+  scroll-behavior: smooth;
 }
-
 
 .contenedor__img:hover .btn-ver-galeria {
   opacity: 1;
