@@ -1,8 +1,5 @@
 @media screen and (max-width: 1000px) {
   .contenedor__congresos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     height: auto;
     max-height: none;
@@ -11,10 +8,10 @@
 
   .lista__congresos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: clamp(1rem, 3dvw, 2rem);
     grid-auto-rows: minmax(200px, auto);
-    grid-auto-flow:dense;
+    grid-auto-flow: dense;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -22,9 +19,11 @@
   }
 
   .item__congreso {
+    aspect-ratio: 13 / 9;
+    max-height: 210px;
     width: 100%;
     float: none;
-    flex-grow: 0;
+    flex-grow: 1;
   }
 
   /* Desactiva efectos hover en móvil */
@@ -33,5 +32,13 @@
     width: 100% !important;
     filter: none;
   }
+  .lista__congresos > li:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
+@media screen and (min-width: 893px) {
+  .lista__congresos > li:last-child {
+    grid-column: auto;
+  }
+}
