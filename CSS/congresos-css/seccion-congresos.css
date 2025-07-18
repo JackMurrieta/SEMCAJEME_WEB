@@ -5,9 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: clamp(1rem, 4dvh, 3rem); /* Espaciado vertical adaptable */
+  padding-block: clamp(2dvh, 4dvh, 6dvh); /* Espaciado vertical adaptable */
   box-sizing: border-box;
-  margin-bottom: 5rem; /*USAR CLAMP*/
+  margin-bottom: clamp(2rem, 6dvh, 5rem); /* Espaciado inferior adaptable */
+}
+main{
+  position: relative;
 }
 
 /* Fondo base desenfocado */
@@ -29,14 +32,21 @@
   overflow: hidden;
   border-radius: 1.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  /**/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lista__congresos {
   display: flex;
+  flex-direction: row;
   height: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .item__congreso {
@@ -44,10 +54,11 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 160px;
+  width: clamp(100px, 10dvw, 160px); /* Adaptable al tamaño de pantalla */
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   float: left;
+  flex-grow: 1;
 }
 
 .contenedor__congresos ul:hover li {
@@ -105,13 +116,13 @@
 
 /* Botón base */
 .btn-ver-galeria {
-  padding: 1.3rem 5rem; /* espacio interno aumentado */
-  margin: 1rem; /* espacio externo */
+  padding: clamp(0.8rem, 2dvh, 1.5rem) clamp(2rem, 5dvw, 5rem);
+  margin: clamp(0.5rem, 2dvh, 1rem);
   background-color: #113b8a;
   color: white;
   border-radius: 0.75rem;
   text-decoration: none;
-  font-size: 1.2rem; /* tamaño de letra más grande */
+  font-size: clamp(1rem, 2dvw, 1.2rem);
   font-weight: 600;
   opacity: 0;
   transform: translateY(10px);
