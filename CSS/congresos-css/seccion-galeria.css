@@ -14,13 +14,13 @@ img {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  gap: clamp(2rem, 5dvh, 6rem);
+  gap: clamp(3rem, 10dvh, 15rem);
   position: relative;
   height: auto;
   padding-bottom: 4rem;
 }
 
-.bloque__bloque {
+.bloque__congreso {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -36,6 +36,7 @@ img {
   text-align: center;
   margin: 0 0 clamp(1rem, 3dvh, 2.5rem) 0;
 }
+
 /*h2*/
 .titulo_congreso {
   font-size: clamp(1.5rem, 4dvw, 2.5rem);
@@ -44,7 +45,7 @@ img {
   margin: 0;
 }
 
-/*LAYOUT DE GALERIA GRID*/
+/* LAYOUT DE GALERIA BASE */
 .galeria__layout {
   display: grid;
   grid-template-columns: repeat(
@@ -81,18 +82,119 @@ img {
   transform: scale(1.05);
 }
 
-/* Estilo tipo mosaico (solo 3 imágenes en este caso) */
-.galeria__layout .contenedor__img:nth-child(1) {
+/* Estilo tipo mosaico (3 primeras imágenes) */
+.galeria__layout--mosaico .contenedor__img:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.galeria__layout--mosaico .contenedor__img:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.galeria__layout--mosaico .contenedor__img:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+/* LAYOUT PERSONALIZADO PARA 3 IMÁGENES USANDO ÁREAS */
+.galeria__layout--3img {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, minmax(150px, 1fr));
+  grid-template-areas:
+    "img-principal img-principal img2"
+    "img-principal img-principal img3";
+}
+
+/* Área para las 3 imágenes */
+.galeria__layout--3img .contenedor__img:nth-child(1) {
+  grid-area: img-principal;
+}
+
+.galeria__layout--3img .contenedor__img:nth-child(2) {
+  grid-area: img2;
+}
+
+.galeria__layout--3img .contenedor__img:nth-child(3) {
+  grid-area: img3;
+}
+
+/* Imágenes adicionales */
+.galeria__layout--3img .contenedor__img:nth-child(n + 4) {
+  aspect-ratio: 1 / 1;
+}
+
+/*galeria layout 5img*/
+.galeria__layout--5img .contenedor__img:nth-child(1) {
   grid-column: span 2;
   grid-row: span 2;
 }
 
-.galeria__layout .contenedor__img:nth-child(2) {
+.galeria__layout--5img .contenedor__img:nth-child(2) {
   grid-column: span 1;
   grid-row: span 1;
 }
 
-.galeria__layout .contenedor__img:nth-child(3) {
+.galeria__layout--5img .contenedor__img:nth-child(3) {
   grid-column: span 1;
   grid-row: span 2;
+}
+
+/*Layout 4IMG*/
+.galeria__layout--4img .contenedor__img:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.galeria__layout--4img .contenedor__img:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.galeria__layout--4img .contenedor__img:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.galeria__layout--4img .contenedor__img:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/*LAYOUT x*/
+
+/* Layout tipo .galeria__congreso--X sin template-area */
+.galeria__layout--X {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Imagen principal grande (ocupa todo el ancho en 2 filas) */
+.galeria__layout--X .contenedor__img:nth-child(1) {
+  grid-column: 1 / -1; /* de la columna 1 hasta la última */
+  grid-row: span 2;
+}
+
+/* Segunda imagen (img3) – parte izquierda en las filas 3 y 4 */
+.galeria__layout--X .contenedor__img:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Tercera imagen (img4) – parte derecha en las filas 3 y 4 */
+.galeria__layout--X .contenedor__img:nth-child(3) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+/*2 img*/
+
+.galeria__layout--2img {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 45%), 1fr));
+  grid-auto-rows: minmax(200px, auto);
+}
+.galeria__layout--2img .contenedor__img:nth-child(1) {
+  grid-column: span 2;
+}
+
+.galeria__layout--2img .contenedor__img:nth-child(2) {
+  grid-column: span 1;
 }

@@ -8,7 +8,9 @@
   padding-block: clamp(2dvh, 4dvh, 6dvh); /* Espaciado vertical adaptable */
   box-sizing: border-box;
   margin-bottom: clamp(2rem, 6dvh, 5rem); /* Espaciado inferior adaptable */
+  background: linear-gradient(transparent,#113b8a99, #021840);
 }
+
 main {
   position: relative;
 }
@@ -18,7 +20,7 @@ main {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, #ffffff88, #113b8a99);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(20px);
   z-index: 0;
 }
 
