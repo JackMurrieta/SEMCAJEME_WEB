@@ -35,13 +35,16 @@ img {
   grid-area: titulo;
   text-align: center;
   margin: 0 0 clamp(1rem, 3dvh, 2.5rem) 0;
+  color: #113b8a;
 }
 
+.bloque__congreso:nth-of-type(n + 6) .contenedor__titulo__congreso {
+  color: #032255;
+}
 /*h2*/
 .titulo_congreso {
   font-size: clamp(1.5rem, 4dvw, 2.5rem);
   font-weight: bold;
-  color: #113b8a;
   margin: 0;
 }
 
