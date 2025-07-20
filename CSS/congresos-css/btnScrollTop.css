@@ -1,0 +1,29 @@
+#btnScrollTop {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5); /* Escalado inicial */
+  z-index: 1000;
+
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+
+  font-size: 2.5rem;
+  color: #113b8a;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Estado visible: se activa vía JS */
+#btnScrollTop.visible {
+  pointer-events: auto;
+}

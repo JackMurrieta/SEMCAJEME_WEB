@@ -33,6 +33,8 @@
       rel="stylesheet"
       href="../CSS/congresos-css/responsive__seccion-galeria.css"
     />
+    <!--BOTON SCROLL BAR TOP-->
+    <link rel="stylesheet" href="../CSS/congresos-css/btnScrollTop.css" />
 
     <!--RESET-->
     <link rel="stylesheet" href="../CSS/default-settings.css" />
@@ -53,6 +55,8 @@
     />
     <!--Menu Responsive js-->
     <script src="../JS/menuResponsive.js" defer></script>
+    <!--BTN SCROLL TOP JS-->
+    <script src="../JS/btnScrollTop.js" defer></script>
     <title>Histria | SEM Cajeme</title>
   </head>
   <body class="raleway-default">
@@ -100,68 +104,151 @@
         </ul>
       </nav>
     </header>
+
     <!--MAIN-->
     <main>
       <div class="fondo-blur"></div>
+      <!--BOTTON UP SCROLL BAR-->
+      <button id="btnScrollTop" aria-label="Subir al inicio">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+      </button>
+
       <!--CONTAINER-->
       <section class="seccion__congresos">
+        <h1>Galería de Congresos SEM Cajeme</h1>
         <!--fondo blur-->
 
         <!--GALERIA-->
         <div class="contenedor__congresos">
-          <ul class="lista__congresos">
+          <ul
+            role="list"
+            aria-label="lista de congresos realizados hasta el momento"
+            class="lista__congresos"
+          >
             <!--1C-->
-            <li class="item__congreso congreso-1">
-              <div class="contenedor__img contenedor__img--congreso-1">
-                <a href="#congreso1" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-1"
+              >
+                <a
+                  aria-label="ir a la galria del 1er congreso"
+                  href="#congreso1"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--2C-->
-            <li class="item__congreso congreso-3">
-              <div class="contenedor__img contenedor__img--congreso-3">
-                <a href="#congreso3" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-3"
+              >
+                <a
+                  aria-label="ir a la galeria del 3er congreso"
+                  href="#congreso3"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--3C-->
-            <li class="item__congreso congreso-4">
-              <div class="contenedor__img contenedor__img--congreso-4">
-                <a href="#congreso4" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-4"
+              >
+                <a
+                  aria-label="ir a la galeria del 4to congreso"
+                  href="#congreso4"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--5C-->
-            <li class="item__congreso congreso-5">
-              <div class="contenedor__img contenedor__img--congreso-5">
-                <a href="#congreso5" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-5"
+              >
+                <a
+                  aria-label="ir a la galeria del to congreso"
+                  href="#congreso5"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--6C-->
-            <li class="item__congreso congreso-6">
-              <div class="contenedor__img contenedor__img--congreso-6">
-                <a href="#congreso6" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-6"
+              >
+                <a
+                  aria-label="ir a la galeria del 6to congreso"
+                  href="#congreso6"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--7C-->
-            <li class="item__congreso congreso-6">
-              <div class="contenedor__img contenedor__img--congreso-7">
-                <a href="#congreso7" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role=" group"
+                class="contenedor__img contenedor__img--congreso-7"
+              >
+                <a
+                  aria-label="ir a la galeria del 7mo congreso"
+                  href="#congreso7"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--8C-->
-            <li class="item__congreso congreso-6">
-              <div class="contenedor__img contenedor__img--congreso-8">
-                <a href="#congreso8" class="btn-ver-galeria">Ver galeria</a>
+            <li class="item__congreso" role="listitem">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-8"
+              >
+                <a
+                  aria-label="ir a la galeria del 8vo congreso"
+                  href="#congreso8"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--9C-->
-            <li class="item__congreso">
-              <div class="contenedor__img contenedor__img--congreso-9">
-                <a href="#congreso9" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-9"
+              >
+                <a
+                  aria-label="ir a la galeria del 9no congreso"
+                  href="#congreso9"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
             <!--10C-->
-            <li class="item__congreso">
-              <div class="contenedor__img contenedor__img--congreso-10">
-                <a href="#congreso10" class="btn-ver-galeria">Ver galeria</a>
+            <li role="listitem" class="item__congreso">
+              <div
+                role="group"
+                class="contenedor__img contenedor__img--congreso-10"
+              >
+                <a
+                  aria-label="ir a la galeria del 10mo congreso"
+                  href="#congreso10"
+                  class="btn-ver-galeria"
+                  >Ver galeria</a
+                >
               </div>
             </li>
           </ul>
