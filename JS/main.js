@@ -48,7 +48,7 @@ function mostrarInfoContenedor(elemento, id) {
         <h3>Mesa Directiva</h3>
         <p>
           Conoce a los miembros actuales de la mesa directiva.
-          <a href="historia.html" class="saber-mas">Saber más</a>
+          <a href="mesaDirectiva.html" class="saber-mas">Saber más</a>
         </p>`;
       break;
     case "contactos":
@@ -56,7 +56,7 @@ function mostrarInfoContenedor(elemento, id) {
         <h3>Contactos</h3>
         <p>
           Si deseas formar parte de nuestros proyectos, patrocinar eventos como el CORMED o establecer una alianza estratégica, puedes contactarnos a través de nuestros canales oficiales.
-          <a href="historia.html" class="saber-mas">Saber más</a>
+          <a href="contactos.html" class="saber-mas">Saber más</a>
         </p>`;
       break;
   }

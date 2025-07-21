@@ -1,0 +1,28 @@
+/* Contenedor de secciones en grid */
+.contenedor__congresos {
+  container-name: inicio-contenido;
+  animation: aparecer 1s 0s both;
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bloque__congreso {
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 40%;
+}
+
+.img {
+  animation: aparecer both;
+  animation-timeline: view();
+  animation-range: cover 10% cover 40%;
+}
+
