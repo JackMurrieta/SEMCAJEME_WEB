@@ -32,6 +32,16 @@
   color: #1a1a1a;
 }
 
+.footer .contenedor__titulo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+footer .contenedor__titulo h3 {
+  margin: 0;
+}
+
 .footer__list {
   list-style: none;
   padding: 0;
@@ -71,6 +81,7 @@
   text-align: center;
   font-size: 0.95rem;
   color: #555;
+  margin-bottom: clamp(0.5rem, 3dvh, 1.5rem);
 }
 
 /* Responsive: tablet y smartphone */
