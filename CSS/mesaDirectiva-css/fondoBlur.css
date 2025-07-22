@@ -1,0 +1,39 @@
+/* Declarar una propiedad personalizada animable */
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* Animación que incrementa el ángulo */
+@keyframes cambiar-angulo {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 160deg;
+  }
+}
+
+.fondo-blur {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from var(--angle),
+    #113b8a66 0deg,
+    #304d9cb3 45deg,
+    #375da3c3 90deg,
+    #536aaba4 135deg,
+    #5a78af99 180deg,
+    #455c9d88 225deg,
+    #113b8a66 270deg,
+    #113b8a63 315deg,
+    #113b8a66 360deg
+  );
+  backdrop-filter: blur(20px);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+
+  animation: cambiar-angulo 20s linear infinite;
+}
