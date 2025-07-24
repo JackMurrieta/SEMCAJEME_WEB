@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   max-height: clamp(800px, 70dvh, 900px); /* o lo que necesites */
-  
+
   box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
   border-radius: 0.5rem;
 }
@@ -43,24 +43,35 @@
   min-width: 250px;
   max-width: 600px;
   align-self: center;
+  line-height: 1.7;
 }
 
-.contenedor__texto h2{
-  font-size: clamp(1.5rem, 1.5dvw, 2rem);
+.contenedor__texto p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-wrap: pretty;
 }
 
+.contenedor__texto h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Igual que .historia__origen h2 */
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
 
-@media screen and (max-width:800px){
+@media screen and (max-width: 800px) {
   .contenedor__seccion-semInforma {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    gap: 2.3rem;
   }
 
-  .contenedor__texto{
-    padding:0 5dvw;
-  }
-  .contenedor__texto h2{
-    font-size: clamp(2rem, 4dvw,5rem);
+  .contenedor__texto {
+    padding: 0 5dvw;
+    max-width: 80ch;
   }
 }
