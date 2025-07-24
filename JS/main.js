@@ -1,73 +1,47 @@
+const contenidosCache = {
+  historia: generarDetalle("historia", `
+    <h3 id="titulo-historia">Historia</h3>
+    <p style="word-break: break-word;">
+      La Sociedad Estudiantil de Medicina (SEM) nació con el propósito de representar,
+      apoyar y fomentar el desarrollo integral de los estudiantes de medicina.
+      Desde su creación, ha sido un espacio de liderazgo, compañerismo y trabajo en equipo,
+      impulsando actividades académicas, científicas y sociales que enriquecen la formación médica.
+      <a href="historia.html" class="saber-mas">Saber más</a>
+    </p>`),
 
-/* CERRAR Y MOSTRAR INFO DESPLEGABLE */
-function mostrarInfoContenedor(elemento, id) {
-  const ids = ["historia", "congresos", "mesaDirec", "contactos"];
-  const grid = document.querySelector(".inicio__secciones");
-  const isMobile = window.innerWidth <= 954; // Responsive
+  congresos: generarDetalle("congresos", `
+    <h3 id="titulo-congresos">Congresos</h3>
+    <p style="word-break: break-word;">
+      CORMED es un congreso académico organizado por estudiantes de medicina que reúne a ponentes de distintas partes de México para abordar temas médicos de actualidad.
+      Es un espacio de actualización, aprendizaje y diálogo entre profesionales de la salud y estudiantes, promoviendo el desarrollo académico y clínico en la región.
+      <a href="congresos.html" class="saber-mas">Saber más</a>
+    </p>`),
 
-  // Cierra si ya hay un detalle abierto
-  const detalleAnterior = document.querySelector(".detalle-seccion");
-  if (detalleAnterior !== null) {
-    if (detalleAnterior.id === id) {
-      cerrarContenedorDetalle();
-      return;
-    } else {
-      detalleAnterior.remove();
-    }
-  }
+  mesaDirec: generarDetalle("mesaDirec", `
+    <h3 id="titulo-mesa">Mesa Directiva</h3>
+    <p style="word-break: break-word;">
+      Conoce a los miembros actuales de la mesa directiva.
+      <a href="mesaDirectiva.html" class="saber-mas">Saber más</a>
+    </p>`),
 
-  // Crear nuevo contenedor
-  const detalle = document.createElement("div");
-  detalle.className = "detalle-seccion";
-  detalle.id = id;
+  contactos: generarDetalle("contactos", `
+    <h3 id="titulo-contactos">Contactos</h3>
+    <p style="word-break: break-word;">
+      Si deseas formar parte de nuestros proyectos, patrocinar eventos como el CORMED o establecer una alianza estratégica, puedes contactarnos a través de nuestros canales oficiales.
+      <a href="contactos.html" class="saber-mas">Saber más</a>
+    </p>`)
+};
 
-  // Contenido dinámico con etiquetas prettys y word-break
-  let contenido = "";
-  switch (id) {
-    case "historia":
-      contenido = `
-        <h3 id="titulo-historia">Historia</h3>
-        <p style="word-break: break-word;">
-          La Sociedad Estudiantil de Medicina (SEM) nació con el propósito de representar,
-          apoyar y fomentar el desarrollo integral de los estudiantes de medicina.
-          Desde su creación, ha sido un espacio de liderazgo, compañerismo y trabajo en equipo,
-          impulsando actividades académicas, científicas y sociales que enriquecen la formación médica.
-          <a href="historia.html" class="saber-mas">Saber más</a>
-        </p>`;
-      break;
-    case "congresos":
-      contenido = `
-        <h3 id="titulo-congresos">Congresos</h3>
-        <p style="word-break: break-word;">
-          CORMED es un congreso académico organizado por estudiantes de medicina que reúne a ponentes de distintas partes de México para abordar temas médicos de actualidad.
-          Es un espacio de actualización, aprendizaje y diálogo entre profesionales de la salud y estudiantes, promoviendo el desarrollo académico y clínico en la región.
-          <a href="congresos.html" class="saber-mas">Saber más</a>
-        </p>`;
-      break;
-    case "mesaDirec":
-      contenido = `
-        <h3 id="titulo-mesa">Mesa Directiva</h3>
-        <p style="word-break: break-word;">
-          Conoce a los miembros actuales de la mesa directiva.
-          <a href="mesaDirectiva.html" class="saber-mas">Saber más</a>
-        </p>`;
-      break;
-    case "contactos":
-      contenido = `
-        <h3 id="titulo-contactos">Contactos</h3>
-        <p style="word-break: break-word;">
-          Si deseas formar parte de nuestros proyectos, patrocinar eventos como el CORMED o establecer una alianza estratégica, puedes contactarnos a través de nuestros canales oficiales.
-          <a href="contactos.html" class="saber-mas">Saber más</a>
-        </p>`;
-      break;
-  }
+/* Generador de estructura con innerHTML incluido */
+function generarDetalle(id, contenido) {
+  const div = document.createElement("div");
+  div.className = "detalle-seccion";
+  div.id = id;
 
-  // Extraer texto del h3 si se necesita para algo más (opcional)
   const tituloMatch = contenido.match(/<h3[^>]*>(.*?)<\/h3>/);
   const tituloTexto = tituloMatch ? tituloMatch[1] : "";
 
-  // Estructura interna
-  detalle.innerHTML = `
+  div.innerHTML = `
     <div class="contenedor-boton">
       <button onclick="cerrarContenedorDetalle()" aria-label="Cerrar detalle de ${tituloTexto}" class="boton-cerrar">
         &times;
@@ -78,7 +52,30 @@ function mostrarInfoContenedor(elemento, id) {
     </div>
   `;
 
-  // Insertar el contenedor en el lugar adecuado
+  return div;
+}
+
+/* CERRAR Y MOSTRAR INFO DESPLEGABLE */
+function mostrarInfoContenedor(elemento, id) {
+  const grid = document.querySelector(".inicio__secciones");
+  const isMobile = window.innerWidth <= 954;
+
+  const detalleAnterior = document.querySelector(".detalle-seccion");
+  if (detalleAnterior) {
+    if (detalleAnterior.id === id) {
+      cerrarContenedorDetalle();
+      return;
+    } else {
+      detalleAnterior.remove();
+    }
+  }
+
+  // Clona desde el cache
+  const detalle = contenidosCache[id].cloneNode(true);
+  detalle.classList.add("aparecer");
+
+  // Inserta eficientemente
+  let insertado = false;
   if (isMobile) {
     const children = Array.from(grid.children);
     const index = children.indexOf(elemento);
@@ -86,17 +83,17 @@ function mostrarInfoContenedor(elemento, id) {
     const siguienteElemento = children[filaIndex + 2];
     if (siguienteElemento) {
       grid.insertBefore(detalle, siguienteElemento);
-    } else {
-      grid.appendChild(detalle);
+      insertado = true;
     }
-  } else {
+  }
+  if (!insertado) {
     grid.appendChild(detalle);
   }
 
-  // Animación de desplazamiento
-  setTimeout(() => {
+  // Animación suave al insertar
+  requestAnimationFrame(() => {
     detalle.scrollIntoView({ behavior: "smooth", block: "center" });
-  }, 100);
+  });
 }
 
 function cerrarContenedorDetalle() {
