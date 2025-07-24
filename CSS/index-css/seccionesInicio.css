@@ -100,7 +100,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
   /**/
   height: max-content;
   max-height: 0;
@@ -143,6 +142,7 @@
 
 .detalle__contenido {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -180,8 +180,10 @@
 /* Botón cerrar */
 .contenedor-boton {
   position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  right:1rem;
+  display: flex;
+  justify-content:center;
+  align-items: center;
   z-index: 10;
 }
 
@@ -193,8 +195,7 @@
   border: none;
   color: #333;
   padding: 0;
-  margin: 0;
-  line-height: 1;
+  margin: 0 auto;
   display: inline-block;
 }
 
