@@ -24,15 +24,17 @@
 }
 
 .fondo-blur {
+  height: 100%;
+  width: 100%;
   position: absolute;
   inset: 0;
   background: conic-gradient(
     from var(--angle),
-    #113b8a 0deg,
+    #113b8a53 0deg,
     #304d9c 60deg,
     #375da3 120deg,
-    #536aab 180deg,
-    #5a78af 240deg,
+    #7e94d0 180deg,
+    #5a78afb8 240deg,
     #455c9d 300deg,
     #113b8a 360deg
   );
@@ -42,4 +44,18 @@
   background-size: cover;
   z-index: -1;
   filter: blur(80px) brightness(85%);
+}
+
+body {
+  position: relative;
+  background: none;
+}
+
+main {
+  position: relative;
+  background: none;
+}
+
+h1 {
+  display: none;
 }
