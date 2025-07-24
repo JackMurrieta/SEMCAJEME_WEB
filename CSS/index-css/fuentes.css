@@ -44,6 +44,6 @@
   }
   /*Titulo seccion de inicio*/
   .seccion__titulo {
-    font-size: clamp(1.5rem, 2dvw, 3rem);
+    font-size: clamp(1.3rem, 2dvw, 3rem);
   }
 }
