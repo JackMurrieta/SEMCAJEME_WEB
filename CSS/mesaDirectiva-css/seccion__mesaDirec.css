@@ -1,3 +1,12 @@
+.seccion__mesaDirec {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .contenedor__miembros {
   display: grid;
   grid-template-columns: repeat(
@@ -8,6 +17,9 @@
   justify-content: center;
   align-items: stretch;
   padding: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .tarjeta__miembro {
@@ -21,7 +33,8 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border: 1px solid #d0d0d0;
   /**/
-  width: clamp(10rem, 15dvw, 25rem); /*width carta presidente*/
+  width: 100%; /* Ocupa el ancho de la celda */
+  max-width: 25rem;
   height: auto;
   /**/
   background: linear-gradient(
@@ -38,11 +51,22 @@
   aspect-ratio: 4 / 5;
   overflow: hidden;
 }
+
 .contenedor__imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+
+  /* Para navegadores basados en WebKit (Chrome, Safari) */
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.348));
 }
 
 .contenedor__info {
@@ -78,6 +102,6 @@
   word-wrap: break-word;
 }
 
-.contenedor__imagen--jefe-deportes img{
-    object-fit: contain;
+.contenedor__imagen--jefe-deportes img {
+  object-fit: contain;
 }
