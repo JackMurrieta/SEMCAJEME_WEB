@@ -47,15 +47,18 @@
 }
 
 body {
-  position: relative;
-  background: none;
+  position: relative !important;
+  background: none !important;
 }
 
 main {
-  position: relative;
-  background: none;
+  position: relative !important;
+  background: none !important;
 }
 
 h1 {
-  display: none;
+  display: none !important;
+}
+.header--mesaDirec {
+  margin-bottom: 0rem !important;
 }
