@@ -8,8 +8,8 @@
   font-weight: 550;
   align-items: stretch;
   justify-content: center;
-  max-height: fit-content;
   container-name: inicio__secciones;
+  margin-bottom: clamp(0.1rem, 1.3dvh, 5rem);
 }
 
 /* Contenedor individual de cada sección */
@@ -101,7 +101,6 @@
   align-items: center;
   /**/
   height: max-content;
-  max-height: 0;
   opacity: 0;
   animation: desplegar 1s ease forwards;
   overflow: hidden;
