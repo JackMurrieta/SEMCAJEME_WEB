@@ -27,7 +27,7 @@
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.676) 0%,
-    rgba(17, 59, 138, 0.132) 100%
+    rgba(3, 33, 88, 0.249) 100%
   );
   backdrop-filter: blur(10px);
   border-radius: 1rem;
@@ -76,4 +76,8 @@
   margin-top: clamp(0.25rem, 1dvh, 0.5rem);
   white-space: normal;
   word-wrap: break-word;
+}
+
+.contenedor__imagen--jefe-deportes img{
+    object-fit: contain;
 }
