@@ -3,7 +3,6 @@
   position: sticky;
   height: fit-content;
   top: 0;
-  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +10,14 @@
   container-name: header;
   padding: 0.2rem 1rem;
   z-index: 100;
+}
+
+.header--index {
+  background: linear-gradient(to bottom, #1c1c1c93, #2f2f2f60, transparent);
+}
+
+.header--white {
+  background: #ffffff;
   border-bottom: 1px solid #ccc;
   box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.515);
   margin-bottom: 1.5rem;
@@ -58,10 +65,16 @@
 /* Cuando el menú está activo */
 .header__nav--visible {
   display: flex;
+  position: fixed;
 }
 
 .nav__toggle--abierto {
   color: #fff;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100dvh;
 }
 
 /* Lista de navegación móvil */
@@ -123,6 +136,10 @@
 
   .link__item {
     color: #113b8a;
+  }
+
+  .header--index .link__item {
+    color: #fff;
   }
 
   .nav__toggle {

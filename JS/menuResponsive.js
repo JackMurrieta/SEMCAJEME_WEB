@@ -9,4 +9,7 @@ function mostrarMenu() {
   // Alternar el valor de aria-expanded
   const expanded = toggle.getAttribute("aria-expanded") === "true";
   toggle.setAttribute("aria-expanded", String(!expanded));
+
+  // Evitar scroll
+  document.body.classList.toggle("no-scroll", !expanded);
 }
