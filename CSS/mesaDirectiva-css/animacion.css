@@ -14,9 +14,8 @@
   }
 }
 
-.tarjeta__miembro{
+.tarjeta__miembro {
   animation: aparecer both;
   animation-timeline: view();
   animation-range: cover 5% cover 40%;
 }
-
