@@ -8,18 +8,49 @@
   justify-content: center;
 }
 .contenedor__miembros {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(clamp(12rem, 20dvw, 25rem), 1fr)
-  );
-  gap: 2rem;
-  justify-content: center;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Espacio entre filas */
   padding: 2rem;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  align-items: center;
+}
+
+.fila {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 1 tarjeta (Presidencia) */
+.fila--1 {
+  justify-content: center;
+}
+
+/* 2 tarjetas */
+.fila--2 {
+  justify-content: center;
+}
+
+/* 3 tarjetas */
+.fila--3 {
+  justify-content: center;
+}
+
+/* 4 tarjetas */
+.fila--4 {
+  justify-content: center;
+}
+
+/* 5 o más tarjetas agrupadas */
+.fila--5 {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .tarjeta__miembro {
@@ -34,7 +65,7 @@
   border: 1px solid #d0d0d0;
   /**/
   width: 100%; /* Ocupa el ancho de la celda */
-  max-width: 25rem;
+  max-width: 15.5rem; /* 248px = cabe 5 por fila en 1400px con gap */
   height: auto;
   /**/
   background: linear-gradient(
