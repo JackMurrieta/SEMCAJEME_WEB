@@ -26,11 +26,8 @@
     <link rel="stylesheet" href="CSS/navBar.css" />
     <link rel="stylesheet" href="CSS/footer.css" />
     <link rel="stylesheet" href="CSS/mesaDirectiva-css/fondoBlur.css" />
-    <link
-      rel="stylesheet"
-      href="CSS/mesaDirectiva-css/seccion__mesaDirec.css"
-    />
-    <link rel="stylesheet" href="CSS/mesaDirectiva-css/animacion.css" />
+    <link rel="stylesheet" href="CSS/comites-css/seccion--inicio.css"/>
+
     <!--Tipografia-->
     <link rel="stylesheet" href="CSS/fuentes-default.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,7 +42,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <!--CSS PAGINA-->
-    <link rel="stylesheet" href="../CSS/scrollBar.css" />
+    <link rel="stylesheet" href="CSS/scrollBar.css" />
 
     <!--Meta Tags OG-->
     <meta name="title" content="SEM Cajeme-web" />
@@ -91,7 +88,7 @@
     <title>Comites | SEM Cajeme</title>
   </head>
   <body class="raleway-default">
-    <header class="header header--white header--mesaDirec raleway-default">
+    <header class="header header--index raleway-default">
       <!--Boton de menu despegable -->
       <button
         class="nav__toggle"
@@ -139,262 +136,56 @@
     <!--MAIN-->
     <main>
       <div class="fondo-blur"></div>
-      <section class="seccion__mesaDirec">
-        <h1>Mesa directiva Actual de SEM Cajeme</h1>
+      <h1>Comites en SEM Cajeme</h1>
+      <!--seccion inicio comites imagenes en animacion y portadas comites-->
+      <section class="seccion seccion--inicio">
+        <div class="contenedor contenedor--animacion"></div>
 
-        <div role="group" class="contenedor__miembros">
-          <!-- Fila 1: Presidenta y Vicepresidenta -->
-          <div class="fila fila--1">
-            <!-- Presidenta -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/PRESIDENTA.png"
-                  alt="Presidenta Janeth Serrano Armenta"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Presidenta <span>Janeth Serrano Armenta</span></h2>
-              </div>
-            </div>
-
-            <!-- Vicepresidenta -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/VICEPRESIDENCIA.png"
-                  alt="Vicepresidenta Esthela Cañez"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Vicepresidenta <span>Esthela Cañez</span></h2>
-              </div>
-            </div>
+        <div class="contenedor contenedor--comites">
+          <!--Actividades Academicas-->
+          <div class="contenedor contenedor--actAcademicas">
+            <a
+              aria-label="ir al comite de actividades academicas"
+              href="#actAcaemicas"
+              class="btn-ver-comite"
+              >Ver comite</a
+            >
           </div>
-
-          <!-- Fila 2 -->
-          <div class="fila fila--2">
-            <!-- Relaciones públicas -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/RELACIONES_PUBLICAS.png"
-                  alt="Relaciones públicas y branding Alejandra Merino"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>
-                  Relaciones públicas y branding <span>Alejandra Merino</span>
-                </h2>
-              </div>
-            </div>
-
-            <!-- Secretaria -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/SECRETARIA.png"
-                  alt="Secretaria Valeria Mendivil"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Secretaria <span>Valeria Mendivil</span></h2>
-              </div>
-            </div>
-
-            <!-- Tesorera -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/TESORERA.png"
-                  alt="Tesorera Michel Mungarro"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Tesorera <span>Michel Mungarro</span></h2>
-              </div>
-            </div>
+          <!--Act comuntarias-->
+          <div class="contenedor contenedor--actComuitarias">
+            <a
+              aria-label="ir al comite de actividades comunitarias"
+              href="#actComunitarias"
+              class="btn-ver-comite"
+              >Ver comite</a
+            >
           </div>
-
-          <!-- Fila 3 -->
-          <div class="fila fila--3">
-            <!-- Jefa actividades académicas -->
-            <div class="tarjeta__miembro">
-              <div
-                class="contenedor__imagen contenedor__imagen--act-academicas"
-              >
-                <img
-                  src="IMG/mesaDirectiva/jefa_act_academicas.png"
-                  alt="Jefa de actividades académicas Natalia Flores"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Jefa actividades académicas <span>Natalia Flores</span></h2>
-              </div>
-            </div>
-
-            <!-- Jefa actividades culturales -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/JEFA_ACTIVIDADES_CULTURALES.png"
-                  alt="Jefa de actividades culturales Monse apellido"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Jefa actividades culturales <span>Monse Apellido</span></h2>
-              </div>
-            </div>
-
-            <!-- Jefa actividades comunitarias -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/JEFA_ACTIVIDADES_COMUNITARIAS.png"
-                  alt="Jefa de actividades comunitarias Alexa Duran"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Jefa actividades comunitarias <span>Alexa Duran</span></h2>
-              </div>
-            </div>
-
-            <!-- Jefe eventos sociales -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/JEFE_EVENTOS_SOCIALES.png"
-                  alt="Jefe de eventos sociales Ricardo Apellido"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Jefe eventos sociales <span>Ricardo Ortega</span></h2>
-              </div>
-            </div>
+          <!--act culturales-->
+          <div class="contenedor contenedor--actCulturales">
+            <a
+              aria-label="ir al comite de actividades culturales"
+              href="#actCulturales"
+              class="btn-ver-comite"
+              >Ver comite</a
+            >
           </div>
-
-          <!-- Fila 4 -->
-          <div class="fila fila--4">
-            <!-- Jefe deportes -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen contenedor__imagen--jefe-deportes">
-                <img
-                  src="IMG/mesaDirectiva/JEFE_DEPORTES.png"
-                  alt="Jefe de deportes Ricardo Cañez"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Jefe deportes <span>Ricardo Cañez</span></h2>
-              </div>
-            </div>
-
-            <!-- Consejera estudiantil -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/CONSEJERA_ESTUDIANTIL.png"
-                  alt="Consejera estudiantil Iveth Espinoza"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Consejera estudiantil <span>Iveth Espinoza</span></h2>
-              </div>
-            </div>
-
-            <!-- Soporte técnico 1 -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/SOPORTE_TECNICOO.png"
-                  alt="Soporte técnico Carlos Moreno"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Soporte técnico <span>Carlos Moreno</span></h2>
-              </div>
-            </div>
-
-            <!-- Soporte técnico 2 -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/SOPORTE_TECNICO.png"
-                  alt="Soporte técnico Bryan Rodriguez"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Soporte técnico <span>Bryan Rodriguez</span></h2>
-              </div>
-            </div>
+          <!--deporte y salud-->
+          <div class="contenedor contenedor--deporte">
+            <a
+              aria-label="ir al comite de deportes y salud"
+              href="#deporte"
+              class="btn-ver-comite"
+              >Ver comite</a
+            >
           </div>
-
-          <!-- Fila 5 -->
-          <div class="fila fila--5">
-            <!-- Vocales -->
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/VOCALLLL.png"
-                  alt="Vocal Roxana Soto"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Vocal <span>Roxana Soto</span></h2>
-              </div>
-            </div>
-
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/VOCALLL.png"
-                  alt="Vocal Carlos Minjarez"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Vocal <span>Carlos Minjarez</span></h2>
-              </div>
-            </div>
-
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/VOCALL.png"
-                  alt="Vocal Michel Vega"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Vocal <span>Michel Vega</span></h2>
-              </div>
-            </div>
-
-            <div class="tarjeta__miembro">
-              <div class="contenedor__imagen">
-                <img
-                  src="IMG/mesaDirectiva/VOCAL.png"
-                  alt="Vocal Alexsa García"
-                  loading="lazy"
-                />
-              </div>
-              <div class="contenedor__info">
-                <h2>Vocal <span>Alexsa García</span></h2>
-              </div>
-            </div>
+          <!--eventos sociales-->
+          <div class="contenedor contenedor--eventoSociales">
+            <a
+              aria-label="ir al comite de eventos sociales"
+              href="#eventoSociales"
+              class="btn-ver-comite"
+              >Ver comite</a
+            >
           </div>
         </div>
       </section>
